@@ -1,0 +1,131 @@
+{
+    "activity_attendance": {
+        "next": [
+            "activity",
+            "attendance"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
+        ]
+    },
+    "activity": {
+        "recognition": "OCR",
+        "expected": "活动",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            0,
+            327,
+            188,
+            178
+        ],
+        "next": [
+            "attendance",
+            "activity",
+            "activity-swap"
+        ]
+    },
+    "activity-swap": {
+        "action": "Click",
+        "begin": [
+            130,
+            315,
+            0,
+            0
+        ],
+        "end": [
+            130,
+            140,
+            0,
+            0
+        ],
+        "next": [
+            "attendance"
+        ]
+    },
+    "attendance": {
+        "recognition": "OCR",
+        "expected": "栖光游灵",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            0,
+            0,
+            255,
+            717
+        ],
+        "next": [
+            "attendance_two",
+            "attendance_three",
+            "Quit"
+        ]
+    },
+    "attendance_two": {
+        "recognition": "TemplateMatch",
+        "template": "activity/01.png",
+        "green_mask": true,
+        "index": -1,
+        "action": "Click",
+        "post_delay": 3000,
+        "target_offset": [
+            135,
+            -145,
+            0,
+            0
+        ],
+        "roi": [
+            265,
+            520,
+            1015,
+            200
+        ],
+        "next": [
+            "activity_get",
+            "Quit"
+        ]
+    },
+    "attendance_three": {
+        "recognition": "OCR",
+        "expected": "天",
+        "action": "Click",
+        "post_delay": 3000,
+        "next": [
+            "activity_get",
+            "activity_attendance_two",
+            "Quit"
+        ]
+    },
+    "activity_attendance_two": {
+        "recognition": "OCR",
+        "expected": "工巧新途",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            0,
+            0,
+            255,
+            717
+        ],
+        "next": [
+            "attendance_two",
+            "activity_attendance_two",
+            "Quit"
+        ]
+    },
+    "activity_get": {
+        "recognition": "OCR",
+        "expected": "获得物资",
+        "action": "Click",
+        "roi": [
+            930,
+            70,
+            310,
+            570
+        ],
+        "next": [
+            "activity_attendance_two",
+            "Quit"
+        ]
+    }
+}

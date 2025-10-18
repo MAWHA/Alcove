@@ -1,0 +1,230 @@
+{
+    "museum_Research": {
+        "next": [
+            "museum",
+            "research_home",
+            "research_return",
+            "research_quit"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
+        ]
+    },
+    "research_quit": {
+        "recognition": "TemplateMatch",
+        "template": "Research\\123.png",
+        "action": "Click",
+        "roi": [
+            1200,
+            25,
+            60,
+            70
+        ],
+        "post_delay": 5000,
+        "next": [
+            "research_home",
+            "research_return",
+            "research_quit",
+            "museum"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
+        ]
+    },
+    "research_return": {
+        "recognition": "TemplateMatch",
+        "template": "Research/115.png",
+        "action": "Click",
+        "roi": [
+            0,
+            0,
+            264,
+            100
+        ],
+        "post_wait_freezes": 500,
+        "next": [
+            "research_home",
+            "research_return",
+            "museum"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
+        ]
+    },
+    "research_home": {
+        "recognition": "TemplateMatch",
+        "template": "Company/social_back_home.png",
+        "action": "Click",
+        "roi": [
+            0,
+            0,
+            300,
+            100
+        ],
+        "post_delay": 1000,
+        "next": [
+            "museum"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
+        ]
+    },
+    "museum": {
+        "pre_wait_freezes": 500,
+        "post_wait_freezes": 1000,
+        "recognition": "OCR",
+        "expected": "博物",
+        "roi": [
+            1087,
+            283,
+            173,
+            167
+        ],
+        "action": "Click",
+        "next": [
+            "Research-week",
+            "choose_theme",
+            "museum"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
+        ]
+    },
+    "Research-week": {
+        "recognition": "OCR",
+        "expected": "常奖",
+        "action": "Click",
+        "target_offset": [
+            500,
+            -40,
+            0,
+            0
+        ],
+        "roi": [
+            0,
+            75,
+            400,
+            180
+        ],
+        "next": [
+            "choose_theme",
+            "Research-week"
+        ]
+    },
+    "choose_theme": {
+        "next": [
+            "mountain-river",
+            "gold-silver"
+        ]
+    },
+    "mountain-river": {
+        "pre_wait_freezes": 500,
+        "recognition": "TemplateMatch",
+        "template": "Research/mountain_research.png",
+        "roi": [
+            13,
+            98,
+            249,
+            123
+        ],
+        "action": "Click",
+        "next": [
+            "enter_theme_1"
+        ]
+    },
+    "gold-silver": {
+        "pre_wait_freezes": 500,
+        "recognition": "TemplateMatch",
+        "template": "Research2/golden_research.png",
+        "roi": [
+            12,
+            253,
+            253,
+            128
+        ],
+        "action": "Click",
+        "next": [
+            "enter_theme_2"
+        ]
+    },
+    "enter_theme_1": {
+        "post_wait_freezes": 500,
+        "recognition": "OCR",
+        "expected": "主题",
+        "action": "Click",
+        "roi": [
+            830,
+            570,
+            450,
+            150
+        ],
+        "next": [
+            "mountain_Research",
+            "mountain_Research_2",
+            "enter_theme_1"
+        ]
+    },
+    "mountain_Research": {
+        "recognition": "OCR",
+        "expected": "启程",
+        "roi": [
+            600,
+            350,
+            675,
+            370
+        ],
+        "action": "Click",
+        "post_wait_freezes": 5000,
+        "next": [
+            "snowscape",
+            "landscape",
+            "journey",
+            "advance_one_man",
+            "advance_one_women",
+            "mountain_Research"
+        ]
+    },
+    "mountain_Research_2": {
+        "recognition": "OCR",
+        "expected": "继续",
+        "action": "Click",
+        "roi": [
+            600,
+            350,
+            675,
+            370
+        ],
+        "post_wait_freezes": 2000,
+        "next": [
+            "advance_one_man",
+            "advance_one_women",
+            "Marksmanship",
+            "Blazing_Knife",
+            "Spells",
+            "agree",
+            "new_state"
+        ]
+    },
+    "enter_theme_2": {
+        "post_wait_freezes": 500,
+        "recognition": "OCR",
+        "expected": "主题",
+        "action": "Click",
+        "roi": [
+            830,
+            570,
+            450,
+            150
+        ],
+        "next": [
+            "gold_research",
+            "jixu-research",
+            "enter_theme_2"
+        ]
+    }
+}

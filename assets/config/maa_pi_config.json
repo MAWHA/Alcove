@@ -1,0 +1,28 @@
+{
+    "resource": "B 服",
+    "controller": {
+        "name": "安卓端"
+    },
+    "task": [
+        {
+            "name": "活动签到",
+            "option": [],
+            "__vscExpand": false,
+            "__vscKey": "434ef1cc-637f-4e61-8235-8c6d28a41cae"
+        }
+    ],
+    "adb": {
+        "adb_path": "M:/leidian/LDPlayer9/adb.exe",
+        "address": "emulator-5554",
+        "config": {
+            "extras": {
+                "ld": {
+                    "enable": true,
+                    "index": 0,
+                    "path": "M:/leidian/LDPlayer9",
+                    "pid": 8508
+                }
+            }
+        }
+    }
+}

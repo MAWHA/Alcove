@@ -1,0 +1,90 @@
+{
+    "blueprint-all": {
+        "next": [
+            "entry_dispath_eight",
+            "blueprint-tearoom",
+            "blueprint-one"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
+        ]
+    },
+    "entry_dispath_eight": {
+        "recognition": "TemplateMatch",
+        "template": "Company/d_company.png",
+        "action": "Click",
+        "post_delay": 7000,
+        "next": [
+            "blueprint-tearoom",
+            "blueprint-one"
+        ],
+        "interrupt": [
+            "Exception-handling-remind",
+            "Exception-handling-nurturance-one"
+        ]
+    },
+    "blueprint-tearoom": {
+        "recognition": "OCR",
+        "expected": "茶室",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            965,
+            365,
+            155,
+            295
+        ],
+        "next": [
+            "blueprint-one"
+        ]
+    },
+    "blueprint-one": {
+        "recognition": "OCR",
+        "expected": "蓝图",
+        "action": "Click",
+        "post_delay": 2000,
+        "roi": [
+            880,
+            10,
+            400,
+            160
+        ],
+        "next": [
+            "blueprint-Receive",
+            "combine-home"
+        ]
+    },
+    "blueprint-Receive": {
+        "recognition": "OCR",
+        "expected": "取",
+        "post_delay": 2000,
+        "action": "Click",
+        "target": [
+            1200,
+            185,
+            0,
+            0
+        ],
+        "roi": [
+            1160,
+            130,
+            120,
+            275
+        ],
+        "next": [
+            "blueprint-get",
+            "combine-home"
+        ]
+    },
+    "blueprint-get": {
+        "recognition": "OCR",
+        "expected": "得",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "blueprint-Receive",
+            "combine-home"
+        ]
+    }
+}
