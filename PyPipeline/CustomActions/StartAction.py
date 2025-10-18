@@ -1,6 +1,8 @@
 from maa.custom_action import CustomAction
 from maa.context import Context
 import time
+from maa.event_sink import EventSink
+
 
 class StartApp(CustomAction):
     def run(
