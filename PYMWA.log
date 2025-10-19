@@ -110,3 +110,255 @@
 2025-10-19 01:52:19,476 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
 2025-10-19 01:52:19,476 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
 2025-10-19 01:52:19,661 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x0000028A298D63C0>
+2025-10-19 16:43:58,296 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 16:43:58,297 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 16:44:00,635 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000001FD482F63C0>
+2025-10-19 16:44:26,451 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 16:44:26,452 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 16:44:26,645 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x00000277C53963C0>
+2025-10-19 16:45:00,804 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 16:45:00,804 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 16:45:00,963 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x00000215FEA663C0>
+2025-10-19 16:45:21,761 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 16:45:21,761 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 16:45:21,918 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000002654DCE63C0>
+2025-10-19 16:45:46,168 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 16:45:46,168 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 16:45:46,316 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000001CB621463C0>
+2025-10-19 16:46:06,229 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 16:46:06,230 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 16:46:06,404 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x0000025FFB2D63C0>
+2025-10-19 16:48:25,454 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 16:48:25,454 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 16:48:25,625 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x0000022B7ED163C0>
+2025-10-19 16:48:47,147 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 16:48:47,147 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 16:48:47,309 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x0000023F41A263C0>
+2025-10-19 16:49:16,468 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 16:49:16,468 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 16:49:16,634 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x00000272CE9363C0>
+2025-10-19 16:49:42,748 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 16:49:42,748 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 16:49:42,925 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x00000241EF2363C0>
+2025-10-19 16:50:00,551 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 16:50:00,551 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 16:50:00,710 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x0000022DCD5563C0>
+2025-10-19 16:51:53,823 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 16:51:53,823 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 16:51:53,984 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x00000258FF8163C0>
+2025-10-19 16:52:18,359 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 16:52:18,360 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 16:52:18,537 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x0000015C352963C0>
+2025-10-19 16:53:22,714 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 16:53:22,714 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 16:53:22,863 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x0000018E7AA063C0>
+2025-10-19 16:53:29,823 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 16:53:29,823 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 16:53:29,984 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x0000016F7EB763C0>
+2025-10-19 16:55:14,499 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 16:55:14,499 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 16:55:14,661 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x0000023F9A1663C0>
+2025-10-19 16:57:26,116 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 16:57:26,116 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 16:57:26,280 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000001C9C47563C0>
+2025-10-19 17:00:40,712 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 17:00:40,713 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 17:00:40,869 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x0000022BDC5363C0>
+2025-10-19 17:01:37,939 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 17:01:37,939 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 17:01:38,094 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000001B7EF4363C0>
+2025-10-19 17:02:13,999 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 17:02:13,999 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 17:02:14,145 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x00000158453563C0>
+2025-10-19 17:03:19,240 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 17:03:19,241 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 17:03:19,395 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x00000164DA0363C0>
+2025-10-19 17:04:03,293 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 17:04:03,294 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 17:04:03,436 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x0000023C9C2763C0>
+2025-10-19 17:05:30,209 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 17:05:30,210 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 17:05:30,347 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x00000195AF9C63C0>
+2025-10-19 17:06:08,848 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 17:06:08,848 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 17:06:09,001 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000001E739B063C0>
+2025-10-19 17:07:10,784 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 17:07:10,785 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 17:07:10,938 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x00000261461063C0>
+2025-10-19 17:07:56,487 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 17:07:56,487 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 17:07:56,671 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x00000286FE9663C0>
+2025-10-19 17:08:38,038 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 17:08:38,039 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 17:08:38,202 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x0000023EFEFF63C0>
+2025-10-19 17:10:01,466 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 17:10:01,467 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 17:10:01,658 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x0000020A3B4C63C0>
+2025-10-19 17:10:17,512 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 17:10:17,512 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 17:10:17,664 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000001576D4C63C0>
+2025-10-19 17:14:58,696 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 17:14:58,696 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 17:14:58,862 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000002C4A64663C0>
+2025-10-19 17:17:34,367 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 17:17:34,367 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 17:17:34,525 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000002CC7E6463C0>
+2025-10-19 17:18:25,501 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 17:18:25,501 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 17:18:25,687 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000001F1FF5A63C0>
+2025-10-19 17:19:44,841 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 17:19:44,841 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 17:19:45,035 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x00000198F0F363C0>
+2025-10-19 17:20:36,924 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 17:20:36,925 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 17:20:37,096 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000001F6FF5063C0>
+2025-10-19 17:21:39,807 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 17:21:39,808 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 17:21:39,960 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000001FFFE6723C0>
+2025-10-19 17:22:47,587 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 17:22:47,588 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 17:22:47,744 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x0000020B7FB563C0>
+2025-10-19 17:24:18,669 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 17:24:18,669 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 17:24:18,844 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000001FCF70863C0>
+2025-10-19 17:25:25,708 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 17:25:25,709 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 17:25:25,863 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000001BFDFC963C0>
+2025-10-19 17:27:29,488 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 17:27:29,488 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 17:27:29,648 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000001BA648063C0>
+2025-10-19 17:31:44,470 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 17:31:44,470 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 17:31:44,637 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000002777EBC63C0>
+2025-10-19 17:32:58,495 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 17:32:58,496 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 17:32:58,706 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x00000210DA6F63C0>
+2025-10-19 17:36:15,923 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 17:36:15,923 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 17:36:16,085 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000001D2202663C0>
+2025-10-19 17:36:39,757 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 17:36:39,757 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 17:36:39,927 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000001C7123663C0>
+2025-10-19 17:44:24,380 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 17:44:24,380 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 17:44:24,604 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000002447AAB23C0>
+2025-10-19 17:46:36,018 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 17:46:36,018 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 17:46:36,188 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x0000023BFE9D63C0>
+2025-10-19 17:46:47,556 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 17:46:47,556 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 17:46:47,719 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000002BC611D63C0>
+2025-10-19 17:47:43,622 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 17:47:43,622 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 17:47:43,805 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000002025E6263C0>
+2025-10-19 17:54:48,545 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 17:54:48,546 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 17:54:48,712 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x0000017BFFA663C0>
+2025-10-19 17:57:40,912 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 17:57:40,913 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 17:57:41,074 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000001DBFE8863C0>
+2025-10-19 17:58:45,401 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 17:58:45,401 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 17:58:45,563 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x0000018A7F2C23C0>
+2025-10-19 18:01:05,358 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 18:01:05,358 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 18:01:05,519 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x00000290693523C0>
+2025-10-19 18:26:36,919 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 18:26:36,919 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 18:26:37,090 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000001A6083763C0>
+2025-10-19 18:40:46,822 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 18:40:46,823 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 18:40:47,047 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000001784DB263C0>
+2025-10-19 18:41:06,939 - MWATools.MWALogging - INFO - 正在更新物华弥新...
+2025-10-19 18:43:00,612 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 18:43:00,613 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 18:43:00,785 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x0000014C7E7E63C0>
+2025-10-19 18:46:07,688 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 18:46:07,688 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 18:46:07,849 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000002AE4A5763C0>
+2025-10-19 18:46:51,201 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 18:46:51,201 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 18:46:51,386 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000002A5FE5063C0>
+2025-10-19 18:47:15,327 - MWATools.MWALogging - INFO - 关闭公告
+2025-10-19 18:48:02,206 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 18:48:02,207 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 18:48:02,374 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000002B15D9923C0>
+2025-10-19 18:48:05,474 - MWATools.MWALogging - INFO - 关闭公告
+2025-10-19 18:48:30,159 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 18:48:30,160 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 18:48:30,317 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000002542E3F63C0>
+2025-10-19 18:48:33,226 - MWATools.MWALogging - INFO - 关闭公告
+2025-10-19 18:48:59,069 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 18:48:59,069 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 18:48:59,217 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000001FBF8D463C0>
+2025-10-19 18:49:01,946 - MWATools.MWALogging - INFO - 关闭公告
+2025-10-19 18:49:37,011 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 18:49:37,012 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 18:49:37,166 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x0000013279F863C0>
+2025-10-19 18:49:39,876 - MWATools.MWALogging - INFO - 关闭公告
+2025-10-19 18:49:47,563 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 18:49:47,564 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 18:49:47,757 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000001A9FEEF63C0>
+2025-10-19 18:49:50,529 - MWATools.MWALogging - INFO - 关闭公告
+2025-10-19 18:51:11,604 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 18:51:11,605 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 18:51:11,758 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000002393DBA23C0>
+2025-10-19 18:51:14,550 - MWATools.MWALogging - INFO - 关闭公告
+2025-10-19 18:51:32,390 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 18:51:32,390 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 18:51:32,553 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000001BE533163C0>
+2025-10-19 18:51:55,192 - MWATools.MWALogging - INFO - 关闭公告
+2025-10-19 18:51:59,781 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 18:51:59,781 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 18:51:59,969 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000001BC2BEB63C0>
+2025-10-19 18:52:02,899 - MWATools.MWALogging - INFO - 关闭公告
+2025-10-19 18:52:42,664 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 18:52:42,664 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 18:52:42,838 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x0000029EFE9463C0>
+2025-10-19 18:52:45,712 - MWATools.MWALogging - INFO - 关闭公告
+2025-10-19 18:53:54,490 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 18:53:54,490 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 18:53:54,648 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000001EC7F5623C0>
+2025-10-19 18:53:57,619 - MWATools.MWALogging - INFO - 关闭公告
+2025-10-19 18:57:24,782 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 18:57:24,783 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 18:57:24,954 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000002DD3A0D67B0>
+2025-10-19 18:57:27,926 - MWATools.MWALogging - INFO - 关闭公告
+2025-10-19 18:57:31,942 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 18:57:31,943 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 18:57:32,136 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x0000023FC3EF67B0>
+2025-10-19 18:57:35,072 - MWATools.MWALogging - INFO - 关闭公告
+2025-10-19 18:59:18,924 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 18:59:18,925 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 18:59:19,076 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x00000179B98E27B0>
+2025-10-19 19:00:54,612 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 19:00:54,612 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 19:00:54,782 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000001A7E9BB67B0>
+2025-10-19 19:01:14,948 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 19:01:14,949 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 19:01:15,104 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000001FA984E67B0>
+2025-10-19 19:01:17,899 - MWATools.MWALogging - INFO - 关闭公告
+2025-10-19 19:03:08,058 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 19:03:08,058 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 19:03:08,214 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000001E3323B67B0>
+2025-10-19 19:03:49,661 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 19:03:49,662 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 19:03:49,815 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x00000210F10B67B0>
+2025-10-19 19:04:08,243 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 19:04:08,244 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 19:04:08,379 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000001CBC72827B0>
+2025-10-19 19:06:36,848 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 19:06:36,849 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 19:06:36,998 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000001E6342A67B0>
+2025-10-19 19:06:39,031 - MWATools.MWALogging - ERROR - 请用户自行登录
+2025-10-19 19:07:34,522 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 19:07:34,522 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 19:07:34,704 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x0000023F405467B0>
+2025-10-19 19:09:11,086 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2025-10-19 19:09:11,087 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12', '127.0.0.1:16384')这个设备
+2025-10-19 19:09:11,275 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000001BF983867B0>
+2025-10-19 19:09:33,862 - MWATools.MWALogging - INFO - 关闭公告
+2025-10-19 19:09:36,348 - MWATools.MWALogging - INFO - 关闭公告
+2025-10-19 19:09:38,784 - MWATools.MWALogging - INFO - 关闭公告
+2025-10-19 19:09:41,229 - MWATools.MWALogging - INFO - 关闭公告
+2025-10-19 19:09:43,666 - MWATools.MWALogging - INFO - 关闭公告
