@@ -1,9 +1,8 @@
 from maa.custom_action import CustomAction
 from maa.context import Context
-from maa.define import OCRResult
 from MWATools.MWALogging import logger
 import time
-import random
+
 
 class StartApp(CustomAction):
     def run(
@@ -11,12 +10,6 @@ class StartApp(CustomAction):
         context: Context,
         argv: CustomAction.RunArg,
     ) -> bool:
-        """
-        :param argv:
-        :param context: 运行上下文
-        :return: 是否执行成功。-参考流水线协议 `on_error`
-        """
-        
         context.tasker.controller.post_start_app("com.cipaishe.wuhua.bilibili")
         while True:
             
@@ -35,28 +28,10 @@ class StartApp(CustomAction):
                                                                                  "expected": "活动公告"}})
             if RecoAnnouncement != None:
                 time.sleep(1)
-                CloseAnnouncement = context.run_recognition("RecoAnnouncement",
-                                                image=context.tasker.controller.post_screencap().wait().get(),
+                CloseAnnouncement = context.run_task("RecoAnnouncement",
                                                 pipeline_override={"RecoAnnouncement":{"recognition": "TemplateMatch",
-                                                                                 "template": "Startup/12.png"}})
-
-                x0 = CloseAnnouncement.best_result.box[0]
-                y0 = CloseAnnouncement.best_result.box[1]
-                w = CloseAnnouncement.best_result.box[2]
-                h = CloseAnnouncement.best_result.box[3]
-
-                # 计算x和y的随机取值范围
-                x_min = x0 
-                x_max = x0+w  
-                y_min = y0 
-                y_max = y0+h  
-
-                # 如果需要整数坐标（例如像素坐标），用randint：
-                random_x = random.randint(int(x_min), int(x_max))
-                random_y = random.randint(int(y_min), int(y_max))
-
-                context.tasker.controller.post_click(random_x, random_y)
-
+                                                                                 "template": "Startup/12.png",
+                                                                                 "action": "Click"}})
                 
                 logger.info("关闭公告")
             
@@ -66,6 +41,16 @@ class StartApp(CustomAction):
                                                                                  "expected": "壬音"}})
             if EntryGame != None:
                 context.tasker.controller.post_click(EntryGame.best_result.box[0],EntryGame.best_result.box[1])
+                time.sleep(5)
+                return_plot_detail = context.run_recognition("skip_return_Plot",
+                        image=context.tasker.controller.post_screencap().wait().get(),
+                        pipeline_override={"skip_return_Plot":{"recognition": "OCR",
+                                                                "expected": "没人"}})
+                if return_plot_detail:
+                    context.run_task("Return", pipeline_override={
+                        "Return": {"action": "custom", "custom_action": "Return"},
+                    })
+                logger.info("进入游戏")
                 return True
             
             SignIn = context.run_recognition("SignIn",

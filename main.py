@@ -4,7 +4,7 @@ from MWATools.MWATasker import MWATaskerClass
 from MWATools.MWAInterface import interface
 from MWATools.MWATaskPipeline import MWATaskPipelineClass
 from PyPipeline.CustomActions.StartAction import StartApp
-
+from PyPipeline.CustomActions.Return import Return
 MWAResource = MWAResourceClass()
 
 
@@ -12,6 +12,9 @@ MWAResource = MWAResourceClass()
 class StartApp(StartApp):
     ...
 
+@MWAResource.resource.custom_action("Return")
+class Return(Return):
+    ...
 
 if __name__ == '__main__':
     try:
