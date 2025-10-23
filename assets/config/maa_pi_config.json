@@ -17,8 +17,8 @@
         "config": {
             "extras": {
                 "ld": {
-                    "enable": true,
-                    "index": 0,
+                    "enable": false,
+                    "index": -2,
                     "path": "M:/leidian/LDPlayer9",
                     "pid": 8508
                 }

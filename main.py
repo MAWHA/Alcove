@@ -4,12 +4,13 @@ from MWATools.MWATasker import MWATaskerClass
 from MWATools.MWAInterface import interface
 from MWATools.MWATaskPipeline import MWATaskPipelineClass
 from PyPipeline.CustomActions.StartAction import StartApp
+from PyPipeline.CustomActions.Email import RecoEmail
 from PyPipeline.CustomActions.Return import Return
 MWAResource = MWAResourceClass()
 
 
-@MWAResource.resource.custom_action("StartApp")
-class StartApp(StartApp):
+@MWAResource.resource.custom_action("RecoEmail")
+class RecoEmail(RecoEmail):
     ...
 
 @MWAResource.resource.custom_action("Return")
@@ -19,7 +20,7 @@ class Return(Return):
 if __name__ == '__main__':
     try:
         pipeline_override = {
-            "MyCustomEntry": {"action": "custom", "custom_action": "StartApp"},
+            "MyCustomEntry": {"action": "custom", "custom_action": "RecoEmail"},
         }
         MWAController = MWAControllerClass()
         MWAController.load_controller()
