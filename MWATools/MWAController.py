@@ -24,6 +24,14 @@ class MWAControllerClass:
             logger.info(f"Alcove搜索到了{len(self.desktop_controllers)}个设备")
             return self.desktop_controllers
    
+    def find_adb_controller(self, adb_path, address):
+        self.adb_controllers = Toolkit.find_adb_devices()
+        for controller in self.adb_controllers:
+            if controller.adb_path == adb_path or controller.address == address:
+                # TODO: adb_path和address暂时没有都匹配
+                self.choose_adb_controller(device_index=self.adb_controllers.index(controller))
+                logger.info(f"从Alcove_config.yaml中读取到{adb_path,address}这个设备并连接")
+    
     def choose_adb_controller(self, device_index=0):
         """选择adb控制器"""
         print(self.adb_controllers)
@@ -59,6 +67,7 @@ class MWAControllerClass:
 
 if __name__ == '__main__':
     MWAController = MWAControllerClass()
-    MWAController.load_controller()
-    adb_controller = MWAController.choose_adb_controller()
-    print(adb_controller)
+    # adbcontroller = read_Alcove_config()
+
+    # MWAController.find_adb_controller(adbcontroller.get('adb_path'), 
+    #                                   adbcontroller.get('address'))

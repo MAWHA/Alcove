@@ -24,6 +24,11 @@ class MWATaskerClass:
         """运行自定义任务"""
         pass
 
+    def run_custom_recognition(self, entry, pipeline_override={}):
+        """运行自定义识别"""
+        tasker_detaile = self.Tasker.post_task(entry, pipeline_override).wait().get()
+        return tasker_detaile
+    
 if __name__ == "__main__":
     MWATasker = MWATaskerClass()
     resource = MWAResourceClass()

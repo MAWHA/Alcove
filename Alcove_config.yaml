@@ -1,0 +1,13 @@
+ADB_Controller:
+  adb_path:
+  - E:/mumu12/mumu12/MuMu Player 12/nx_main/adb.exe
+  address: 127.0.0.1:16384
+  config:
+    extras:
+      mumu:
+        enable: true
+        index: 0
+        path: E:/mumu12/mumu12/MuMu Player 12
+  input_methods: 18446744073709551615
+  screencap_methods: 64
+TaskList: {}
