@@ -3,8 +3,17 @@ from MWATools.MWAResource import MWAResourceClass
 from MWATools.MWATasker import MWATaskerClass
 from MWATools.MWAInterface import interface
 from MWATools.MWATaskPipeline import MWATaskPipelineClass
-from PyPipeline.CustomActions.StartAction import StartApp
+from MWATools.MWAConfig import MWAConfig
+
+
+from PyPipeline.CustomActions.Start import StartApp
 from PyPipeline.CustomActions.Return import Return
+from PyPipeline.CustomActions.OpenRecruitment import OpenRecruitment
+
+from PyPipeline.CustomRecos.PopUpRecognition import PopUpRecognition
+
+# todo: 任务列表，从配置文件读取，如果没有相关配置则在第一次添加任务时生成配置文件，后续更换则更新配置文件
+
 MWAResource = MWAResourceClass()
 
 
@@ -16,6 +25,13 @@ class StartApp(StartApp):
 class Return(Return):
     ...
 
+@MWAResource.resource.custom_action("OpenRecruitment")
+class OpenRecruitment(OpenRecruitment):
+    ...
+
+@MWAResource.resource.custom_recognition("PopUpRecognition")
+class PopUpRecognition(PopUpRecognition):
+    ...
 if __name__ == '__main__':
     try:
         pipeline_override = {
@@ -29,7 +45,12 @@ if __name__ == '__main__':
 
         adb_controller = MWAController.connect_adb_controller()
         MWATasker.MWATaskerBind(controller=adb_controller, resource=MWAResource.resource)
-        task_detail = MWATasker.run_action("MyCustomEntry", pipeline_override)
+        # task_detail = MWATasker.run_action("MyCustomEntry", pipeline_override)
+        reco_pipeline_override = {
+            "MyCustomReco": {"recognition":"custom", "custom_recognition":"PopUpRecognition"},
+        }
+        reco_detail = MWATasker.run_custom_recognition("MyCustomReco", pipeline_override=reco_pipeline_override)
+        print("识别结果：", reco_detail)
         # MWATaskPipelineClass = MWATaskPipelineClass()
         # print(MWATaskPipelineClass.add_pipeline('启动'))
         # print(MWATaskPipelineClass.add_pipeline('器者征集',True))

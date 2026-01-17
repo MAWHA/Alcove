@@ -1,0 +1,44 @@
+from MWATools.MWAController import MWAControllerClass
+from MWATools.MWAResource import MWAResourceClass
+from MWATools.MWATasker import MWATaskerClass
+from MWATools.MWAInterface import interface
+from MWATools.MWATaskPipeline import MWATaskPipelineClass
+from MWATools.MWAConfig import MWAConfig
+
+
+
+from PyPipeline.CustomActions.Start import StartApp
+from PyPipeline.CustomActions.Return import Return
+from PyPipeline.CustomActions.OpenRecruitment import OpenRecruitment
+
+
+# todo: 任务列表，从配置文件读取，如果没有相关配置则在第一次添加任务时生成配置文件，后续更换则更新配置文件
+
+MWAResource = MWAResourceClass()
+
+
+@MWAResource.resource.custom_action("StartApp")
+class StartApp(StartApp):
+    ...
+
+@MWAResource.resource.custom_action("Return")
+class Return(Return):
+    ...
+
+@MWAResource.resource.custom_action("OpenRecruitment")
+class OpenRecruitment(OpenRecruitment):
+    ...
+
+if __name__ == '__main__':
+    MWAController = MWAControllerClass()
+    MWAController.load_controller()
+    MWAController.choose_adb_controller()
+
+    MWATasker = MWATaskerClass()
+
+    adb_controller = MWAController.connect_adb_controller()
+    MWATasker.MWATaskerBind(controller=adb_controller, resource=MWAResource.resource)
+    print("successed")
+    # MWATaskPipelineClass = MWATaskPipelineClass()
+    # print(MWATaskPipelineClass.add_pipeline('启动'))
+    # print(MWATaskPipelineClass.add_pipeline('器者征集',True))

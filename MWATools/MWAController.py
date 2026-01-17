@@ -17,6 +17,7 @@ class MWAControllerClass:
         if self._controller_config["name"] == "安卓端":
             self.adb_controllers = Toolkit.find_adb_devices()
             logger.info(f"Alcove搜索到了{len(self.adb_controllers)}个设备")
+            print("请选择要连接的设备:",self.adb_controllers)
             return self.adb_controllers
         elif self._controller_config["name"] == "win32端":
             '''基本没用'''
@@ -24,6 +25,13 @@ class MWAControllerClass:
             logger.info(f"Alcove搜索到了{len(self.desktop_controllers)}个设备")
             return self.desktop_controllers
    
+    def find_adb_controller(self, adb_path, address):
+        self.adb_controllers = Toolkit.find_adb_devices()
+        for controller in self.adb_controllers:
+            if controller.adb_path == adb_path or controller.address == address:
+                # TODO: adb_path和address暂时没有都匹配
+                self.choose_adb_controller(device_index=self.adb_controllers.index(controller))
+    
     def choose_adb_controller(self, device_index=0):
         """选择adb控制器"""
         print(self.adb_controllers)
@@ -45,10 +53,10 @@ class MWAControllerClass:
         )
         try:
             adb_controller.post_connection().wait()
-            logger.info(f"已连接到模拟器:{adb_controller}")
+            logger.info(f"已连接到模拟器:{self.adb_controller.adb_path,self.adb_controller.address}")
             print(self.adb_controller.config)
         except:
-            logger.error(f"模拟器连接失败:{adb_controller}")
+            logger.error(f"模拟器连接失败:{self.adb_controller.adb_path,self.adb_controller.address}")
         return adb_controller
         
     def choose_desktop_controller(self, device_index=0):
@@ -56,9 +64,10 @@ class MWAControllerClass:
         
     def connect_desktop_controller(self):
         pass
-
+    
 if __name__ == '__main__':
     MWAController = MWAControllerClass()
-    MWAController.load_controller()
-    adb_controller = MWAController.choose_adb_controller()
-    print(adb_controller)
+    # adbcontroller = read_Alcove_config()
+
+    # MWAController.find_adb_controller(adbcontroller.get('adb_path'), 
+    #                                   adbcontroller.get('address'))
