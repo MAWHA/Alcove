@@ -1,9 +1,11 @@
 import yaml
-from os.path import exists
-
+from os.path import exists, dirname, abspath
+import sys
 from maa.controller import AdbController
 
-
+current_script_dir = dirname(abspath(__file__))
+AlcoveWorkPath = dirname(current_script_dir)
+ 
 class MWAConfig:
     def __init__(self):
         self.config_data_existence = exists('Alcove_config.yaml')
@@ -19,7 +21,8 @@ class MWAConfig:
                     },
                 'TaskList':{
                     # todo: 任务列表的配置选项
-                }
+                },
+                "resource": AlcoveWorkPath + "\\assets\\resource\\"
             }
             
             # 2. 写入到 YAML 文件
@@ -27,7 +30,7 @@ class MWAConfig:
                 yaml.dump(config_data, yaml_file, default_flow_style=False, allow_unicode=True)
 
     @staticmethod
-    def read_Alcove_config():
+    def read_Alcove_adb():
         # 1. 读取 YAML 文件
         with open('Alcove_config.yaml', 'r', encoding='utf-8') as yaml_file:
             config_data = yaml.load(yaml_file, Loader=yaml.FullLoader)
@@ -37,3 +40,11 @@ class MWAConfig:
         # TODO: 解析任务列表的配置选项
         # 3. 返回配置数据
         return  {'adb_path': adb_path, 'address': address}
+    @staticmethod
+    def read_Alcove_resource() -> str:
+        # 1. 读取 YAML 文件
+        with open('Alcove_config.yaml', 'r', encoding='utf-8') as yaml_file:
+            config_data = yaml.load(yaml_file, Loader=yaml.FullLoader)
+            # 2. 解析配置数据
+            resource_path = config_data['resource']
+            return resource_path

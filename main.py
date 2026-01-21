@@ -33,30 +33,32 @@ class OpenRecruitment(OpenRecruitment):
 class PopUpRecognition(PopUpRecognition):
     ...
 if __name__ == '__main__':
-    try:
-        pipeline_override = {
-            "MyCustomEntry": {"action": "custom", "custom_action": "StartApp"},
-        }
-        MWAController = MWAControllerClass()
-        MWAController.load_controller()
-        MWAController.choose_adb_controller()
+    MWAConfig.generate_Alcove_config(adb_path="adb", address="127.0.0.1:5037")
+    print(MWAConfig.read_Alcove_resource())
+    # try:
+    #     pipeline_override = {
+    #         "MyCustomEntry": {"action": "custom", "custom_action": "StartApp"},
+    #     }
+    #     MWAController = MWAControllerClass()
+    #     MWAController.load_controller()
+    #     MWAController.choose_adb_controller()
 
-        MWATasker = MWATaskerClass()
+    #     MWATasker = MWATaskerClass()
 
-        adb_controller = MWAController.connect_adb_controller()
-        MWATasker.MWATaskerBind(controller=adb_controller, resource=MWAResource.resource)
-        # task_detail = MWATasker.run_action("MyCustomEntry", pipeline_override)
-        reco_pipeline_override = {
-            "MyCustomReco": {"recognition":"custom", "custom_recognition":"PopUpRecognition"},
-        }
-        reco_detail = MWATasker.run_custom_recognition("MyCustomReco", pipeline_override=reco_pipeline_override)
-        print("识别结果：", reco_detail)
+    #     adb_controller = MWAController.connect_adb_controller()
+    #     MWATasker.MWATaskerBind(controller=adb_controller, resource=MWAResource.resource)
+    #     # task_detail = MWATasker.run_action("MyCustomEntry", pipeline_override)
+    #     reco_pipeline_override = {
+    #         "MyCustomReco": {"recognition":"custom", "custom_recognition":"PopUpRecognition"},
+    #     }
+    #     reco_detail = MWATasker.run_custom_recognition("MyCustomReco", pipeline_override=reco_pipeline_override)
+    #     print("识别结果：", reco_detail)
         # MWATaskPipelineClass = MWATaskPipelineClass()
         # print(MWATaskPipelineClass.add_pipeline('启动'))
         # print(MWATaskPipelineClass.add_pipeline('器者征集',True))
-    except KeyboardInterrupt:
-        # 捕获Ctrl+C触发的异常
-        print("\n检测到Ctrl+C，程序将取消并退出")
-        MWATasker.Tasker.stopping()
+    # except KeyboardInterrupt:
+    #     # 捕获Ctrl+C触发的异常
+    #     print("\n检测到Ctrl+C，程序将取消并退出")
+    #     MWATasker.Tasker.stopping()
         # 可选：在这里添加退出前的清理操作（如关闭文件、释放资源等）
         # 程序会在except块执行完后自动退出

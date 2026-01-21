@@ -1,11 +1,22 @@
-import QtQuick  
-import HuskarUI.Basic  
-import ADBController 1.0
+import QtQuick
+import QtQuick.Controls 6.2
+import QtQml 2.15
+import QtQuick.Dialogs
 
+import HuskarUI.Basic  
+
+import ADBController 1.0
+import ConfigRead
 Item {
     id: rootItem
-
+    property string selectedPath: ""
     Component.onCompleted: {
+        if (ConfigRead && ConfigRead.ResourceSignal) {
+            ConfigRead.ResourceSignal.connect(function(resources_path){
+                console.log("QML接收resources路径：", resources_path);
+                resourcePathInput.text = resources_path
+            });
+        }
         if (ADBController && ADBController.ADBSignal) {
             ADBController.ADBSignal.connect(function(devices_adb_paths) {
                 var deviceList = JSON.parse(devices_adb_paths);
@@ -31,8 +42,48 @@ Item {
     Column {  
         anchors.centerIn: parent  
         spacing: 20
-        
-        HusText {
+       
+        Column{
+            HusText {
+                text: "资源路径"
+                font.pixelSize: 20
+            }
+            Row {
+                HusInput {
+                    id: resourcePathInput
+                    width: 345
+                    height: 30
+                    placeholderText: "请输入资源路径"
+                    radiusBg.topRight: 0
+                    radiusBg.bottomRight: 0
+                }
+                HusButton{
+                    text: "选择资源路径"  
+                    type: HusButton.Type_Filled
+                    onClicked: {
+                        fileDialog.open()
+                    }
+                    radiusBg.all: resourcePathInput.radiusBg.all
+                    radiusBg.topLeft: 0
+                    radiusBg.bottomLeft: 0
+                }
+                FileDialog {
+                    id: fileDialog
+                    title: "选择文件"
+                    nameFilters: ["yaml配置文件(*.yaml)"]
+                    onAccepted: {
+                        console.log("选择的文件: " + fileDialog.selectedFile)
+                        if (ConfigRead) {
+                            ConfigRead.get_resource();
+                        }
+                    }
+                    onRejected: {
+                        console.log("取消选择")
+                    }
+                    }
+                }
+        }
+         HusText {
             text: "ADB路径"
             font.pixelSize: 20  
         }
@@ -49,7 +100,7 @@ Item {
             HusButtonBlock{
                 id: connectAndScanBtn
                 model: [  
-                    { text: "扫描ADB设备", label: "扫描ADB设备", type: HusButton.Type_Outlined},  
+                    { text: "扫描ADB设备", label: "扫描ADB设备", type: HusButton.Type_Filled},  
                     { text: "连接ADB设备", label: "连接ADB设备", type: HusButton.Type_Filled}  
                 ]
                 radiusBg.all: adbPathInput.radiusBg.all
@@ -60,7 +111,6 @@ Item {
                     var itemText = model[index].text  
                     if (itemText == "扫描ADB设备") {  
                         console.log("扫描ADB设备（点击按钮）");
-                        // 先判断ADBController是否可用，避免调用失败
                         if (ADBController) {
                             ADBController.find_adb_controller();
                         } else {
@@ -83,15 +133,6 @@ Item {
                 width: 150
                 placeholderText: "请输入ADB地址"
             }
-        }
-        HusText {
-            text: "资源路径"
-            font.pixelSize: 20  
-        }
-        HusInput {
-            width: 595
-            placeholderText: "请输入资源路径"
-            active: false
         }
     }    
 }

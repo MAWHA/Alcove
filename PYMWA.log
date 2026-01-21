@@ -911,3 +911,14 @@
 2026-01-20 15:28:18,588 - MWATools.MWALogging - INFO - 获取adb设备路径成功：[{"adb_path": "E:\\mumu12\\mumu12\\MuMu Player 12\\nx_main\\adb.exe", "adb_address": "127.0.0.1:16384"}]
 2026-01-20 15:35:16,331 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
 2026-01-20 15:35:16,333 - MWATools.MWALogging - INFO - 获取adb设备路径成功：[{"adb_path": "E:\\mumu12\\mumu12\\MuMu Player 12\\nx_main\\adb.exe", "adb_address": "127.0.0.1:16384"}]
+2026-01-20 20:12:41,107 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2026-01-20 20:12:41,110 - MWATools.MWALogging - INFO - 获取adb设备路径成功：[{"adb_path": "E:\\mumu12\\mumu12\\MuMu Player 12\\nx_main\\adb.exe", "adb_address": "127.0.0.1:16384"}]
+2026-01-20 20:12:47,091 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12 v5', '127.0.0.1:16384')这个设备
+2026-01-20 20:12:47,290 - MWATools.MWALogging - INFO - 已连接到模拟器:(WindowsPath('E:/mumu12/mumu12/MuMu Player 12/nx_main/adb.exe'), '127.0.0.1:16384')
+2026-01-21 13:01:58,100 - MWATools.MWALogging - INFO - Alcove搜索到了0个设备
+2026-01-21 13:01:58,101 - MWATools.MWALogging - INFO - 获取adb设备路径成功：[]
+2026-01-21 13:01:59,501 - MWATools.MWALogging - INFO - Alcove搜索到了0个设备
+2026-01-21 13:01:59,501 - MWATools.MWALogging - INFO - 获取adb设备路径成功：[]
+2026-01-21 21:41:08,864 - MWATools.MWALogging - INFO - Alcove搜索到了0个设备
+2026-01-21 21:41:08,865 - MWATools.MWALogging - INFO - 获取adb设备路径成功：[]
+2026-01-21 21:41:13,430 - MWATools.MWALogging - WARNING - ADB连接参数为空：路径或地址未填写
