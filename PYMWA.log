@@ -669,3 +669,373 @@
 2026-01-18 00:57:57,023 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
 2026-01-18 00:57:57,023 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12 v5', '127.0.0.1:16384')这个设备
 2026-01-18 00:57:57,155 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x00000200FF695160>
+2026-01-20 21:47:33,969 - MWATools.MWALogging - ERROR - 查找ADB控制器失败: ADB路径检测失败: [WinError 2] 系统找不到指定的文件。
+2026-01-20 21:47:34,957 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12 v5', '127.0.0.1:16384')这个设备
+2026-01-20 21:47:34,957 - MWATools.MWALogging - INFO - 找到ADB设备: M:\mumu\MuMu Player 12\shell\adb.exe, 127.0.0.1:16384
+2026-01-20 21:47:37,944 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x000001F341E24EC0>
+2026-01-20 21:48:23,198 - MWATools.MWALogging - ERROR - 查找ADB控制器失败: ADB路径检测失败: [WinError 2] 系统找不到指定的文件。
+2026-01-20 21:48:23,397 - MWATools.MWALogging - ERROR - 未找到匹配的ADB设备
+2026-01-20 21:48:45,914 - MWATools.MWALogging - ERROR - 查找ADB控制器失败: ADB路径检测失败: [WinError 2] 系统找不到指定的文件。
+2026-01-20 21:48:46,094 - MWATools.MWALogging - ERROR - 未找到匹配的ADB设备
+2026-01-20 21:49:06,609 - MWATools.MWALogging - ERROR - 查找ADB控制器失败: ADB路径检测失败: [WinError 2] 系统找不到指定的文件。
+2026-01-20 21:49:06,801 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12 v5', '127.0.0.1:16384')这个设备
+2026-01-20 21:49:06,801 - MWATools.MWALogging - INFO - 找到ADB设备: M:\mumu\MuMu Player 12\shell\adb.exe, 127.0.0.1:16384
+2026-01-20 21:49:09,317 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x00000216E7D7F620>
+2026-01-20 22:05:43,904 - MWATools.MWALogging - ERROR - 查找ADB控制器失败: ADB路径检测失败: [WinError 2] 系统找不到指定的文件。
+2026-01-20 22:05:44,144 - MWATools.MWALogging - INFO - 选择了('MuMuPlayer12 v5', '127.0.0.1:16384')这个设备
+2026-01-20 22:05:44,144 - MWATools.MWALogging - INFO - 找到ADB设备: M:\mumu\MuMu Player 12\shell\adb.exe, 127.0.0.1:16384
+2026-01-20 22:05:44,567 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x00000254FF90F620>
+2026-01-21 19:11:49,468 - MWATools.MWALogging - INFO - Updated ../config.json with new interface path
+2026-01-21 19:11:49,480 - MWATools.MWALogging - INFO - Successfully loaded interface.json
+2026-01-21 20:25:49,419 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 20:26:56,883 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 20:26:59,091 - MWATools.MWALogging - INFO - Alcove搜索到了3个设备
+2026-01-21 20:27:09,078 - MWATools.MWALogging - INFO - 用户选择了设备: ('MuMuPlayer12 v5', '127.0.0.1:16384')
+2026-01-21 20:27:09,834 - MWATools.MWALogging - INFO - 已连接到模拟器:<maa.controller.AdbController object at 0x00000245FCA79010>
+2026-01-21 20:33:36,027 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 20:33:36,251 - MWATools.MWALogging - INFO - Alcove搜索到了3个设备
+2026-01-21 20:33:46,358 - MWATools.MWALogging - INFO - 用户选择了设备: ('LDPlayer', 'emulator-5554')
+2026-01-21 20:34:28,251 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 20:34:28,478 - MWATools.MWALogging - INFO - Alcove搜索到了3个设备
+2026-01-21 20:34:38,004 - MWATools.MWALogging - INFO - 用户选择了设备: ('LDPlayer', 'emulator-5554')
+2026-01-21 20:34:58,544 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 20:34:58,766 - MWATools.MWALogging - INFO - Alcove搜索到了3个设备
+2026-01-21 20:35:06,690 - MWATools.MWALogging - INFO - 用户选择了设备: ('LDPlayer', 'emulator-5554')
+2026-01-21 20:35:18,799 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 20:35:19,015 - MWATools.MWALogging - INFO - Alcove搜索到了3个设备
+2026-01-21 20:35:24,099 - MWATools.MWALogging - INFO - 用户选择了设备: ('MuMuPlayer12 v5', '127.0.0.1:16384')
+2026-01-21 20:35:24,275 - MWATools.MWALogging - INFO - ✅ 模拟器连接成功:<maa.controller.AdbController object at 0x0000023A7FAD9010>
+2026-01-21 20:35:24,275 - MWATools.MWALogging - ERROR - 配置更新失败:'MWAControllerClass' object has no attribute 'modify_adb_path'
+2026-01-21 20:35:24,275 - MWATools.MWALogging - ERROR - 模拟器连接失败:'MWAControllerClass' object has no attribute 'modify_adb_path'
+2026-01-21 20:37:14,898 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 20:37:15,130 - MWATools.MWALogging - INFO - Alcove搜索到了3个设备
+2026-01-21 20:37:23,282 - MWATools.MWALogging - INFO - 用户选择了设备: ('MuMuPlayer12 v5', '127.0.0.1:16384')
+2026-01-21 20:37:23,449 - MWATools.MWALogging - INFO - ✅ 模拟器连接成功:<maa.controller.AdbController object at 0x0000019FE8DE9010>
+2026-01-21 20:37:23,449 - MWATools.MWALogging - ERROR - 配置更新失败:'MWAControllerClass' object has no attribute 'modify_adb_path'
+2026-01-21 20:37:23,449 - MWATools.MWALogging - ERROR - 模拟器连接失败:'MWAControllerClass' object has no attribute 'modify_adb_path'
+2026-01-21 20:39:23,927 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 20:39:24,169 - MWATools.MWALogging - INFO - Alcove搜索到了3个设备
+2026-01-21 20:39:28,699 - MWATools.MWALogging - INFO - 用户选择了设备: ('MuMuPlayer12 v5', '127.0.0.1:16384')
+2026-01-21 20:39:28,892 - MWATools.MWALogging - INFO - ✅ 模拟器连接成功:<maa.controller.AdbController object at 0x000001F14F1FF4D0>
+2026-01-21 20:39:28,892 - MWATools.MWALogging - ERROR - 配置更新失败:'MWAControllerClass' object has no attribute 'modify_adb_path'
+2026-01-21 20:39:28,892 - MWATools.MWALogging - ERROR - 模拟器连接失败:'MWAControllerClass' object has no attribute 'modify_adb_path'
+2026-01-21 20:40:46,600 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 20:40:46,843 - MWATools.MWALogging - INFO - Alcove搜索到了3个设备
+2026-01-21 20:40:53,615 - MWATools.MWALogging - INFO - 用户选择了设备: ('MuMuPlayer12 v5', '127.0.0.1:16384')
+2026-01-21 20:40:53,794 - MWATools.MWALogging - INFO - ✅ 模拟器连接成功:<maa.controller.AdbController object at 0x0000029CE911F4D0>
+2026-01-21 20:40:53,797 - MWATools.MWALogging - INFO - ✅ 更新ADB路径配置:M:\mumu\MuMu Player 12\nx_main\adb.exe
+2026-01-21 20:40:53,813 - MWATools.MWALogging - ERROR - 修改ADB地址失败: could not determine a constructor for the tag 'tag:yaml.org,2002:python/object/apply:pathlib._local.WindowsPath'
+  in "Alcove_config.yaml", line 3, column 5
+2026-01-21 20:40:53,814 - MWATools.MWALogging - ERROR - 配置更新失败:could not determine a constructor for the tag 'tag:yaml.org,2002:python/object/apply:pathlib._local.WindowsPath'
+  in "Alcove_config.yaml", line 3, column 5
+2026-01-21 20:40:53,814 - MWATools.MWALogging - ERROR - 模拟器连接失败:could not determine a constructor for the tag 'tag:yaml.org,2002:python/object/apply:pathlib._local.WindowsPath'
+  in "Alcove_config.yaml", line 3, column 5
+2026-01-21 20:42:35,376 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 20:42:35,608 - MWATools.MWALogging - INFO - Alcove搜索到了3个设备
+2026-01-21 20:42:41,998 - MWATools.MWALogging - INFO - 用户选择了设备: ('MuMuPlayer12 v5', '127.0.0.1:16384')
+2026-01-21 20:42:42,177 - MWATools.MWALogging - INFO - ✅ 模拟器连接成功:<maa.controller.AdbController object at 0x000002794D01F4D0>
+2026-01-21 20:42:42,179 - MWATools.MWALogging - INFO - ✅ 更新ADB路径配置:M:\mumu\MuMu Player 12\nx_main\adb.exe
+2026-01-21 20:42:42,195 - MWATools.MWALogging - INFO - ✅ 更新ADB地址配置:127.0.0.1:16384
+2026-01-21 20:42:42,195 - MWATools.MWALogging - INFO - 配置更新完成:<maa.controller.AdbController object at 0x000002794D01F4D0>
+2026-01-21 20:43:05,030 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 20:43:05,292 - MWATools.MWALogging - INFO - Alcove搜索到了3个设备
+2026-01-21 20:43:09,418 - MWATools.MWALogging - INFO - 用户选择了设备: ('LDPlayer', 'emulator-5554')
+2026-01-21 20:44:52,871 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 20:44:53,103 - MWATools.MWALogging - INFO - Alcove搜索到了3个设备
+2026-01-21 20:44:57,674 - MWATools.MWALogging - INFO - 用户选择了设备: ('LDPlayer', 'emulator-5554')
+2026-01-21 20:44:57,675 - MWATools.MWALogging - INFO - 正在尝试连接设备: LDPlayer - emulator-5554
+2026-01-21 20:44:57,675 - MWATools.MWALogging - ERROR - 连接过程中发生错误: Job.wait() got an unexpected keyword argument 'timeout'
+2026-01-21 20:44:57,675 - MWATools.MWALogging - ERROR - ADB服务可能未正常运行
+2026-01-21 20:45:08,089 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 20:45:08,306 - MWATools.MWALogging - INFO - Alcove搜索到了3个设备
+2026-01-21 20:45:12,329 - MWATools.MWALogging - INFO - 用户选择了设备: ('MuMuPlayer12 v5', '127.0.0.1:16384')
+2026-01-21 20:45:12,329 - MWATools.MWALogging - INFO - 正在尝试连接设备: MuMuPlayer12 v5 - 127.0.0.1:16384
+2026-01-21 20:45:12,330 - MWATools.MWALogging - ERROR - 连接过程中发生错误: Job.wait() got an unexpected keyword argument 'timeout'
+2026-01-21 20:45:12,330 - MWATools.MWALogging - ERROR - ADB服务可能未正常运行
+2026-01-21 20:46:43,258 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 20:46:43,492 - MWATools.MWALogging - INFO - Alcove搜索到了3个设备
+2026-01-21 20:46:46,554 - MWATools.MWALogging - INFO - 用户选择了设备: ('MuMuPlayer12 v5', '127.0.0.1:16384')
+2026-01-21 20:46:46,554 - MWATools.MWALogging - INFO - 正在尝试连接设备: MuMuPlayer12 v5 - 127.0.0.1:16384
+2026-01-21 20:46:46,761 - MWATools.MWALogging - INFO - ✅ 成功连接到模拟器: <maa.controller.AdbController object at 0x000001D72B02B4D0>
+2026-01-21 20:46:46,761 - MWATools.MWALogging - ERROR - ❌ 连接状态验证失败
+2026-01-21 20:46:46,761 - MWATools.MWALogging - ERROR - 连接过程中发生错误: 连接状态验证失败
+2026-01-21 20:46:46,761 - MWATools.MWALogging - ERROR - ADB服务可能未正常运行
+2026-01-21 20:48:38,784 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 20:48:39,006 - MWATools.MWALogging - INFO - Alcove搜索到了3个设备
+2026-01-21 20:48:41,808 - MWATools.MWALogging - INFO - 用户选择了设备: ('MuMuPlayer12 v5', '127.0.0.1:16384')
+2026-01-21 20:48:41,808 - MWATools.MWALogging - INFO - 正在尝试连接设备: MuMuPlayer12 v5 - 127.0.0.1:16384
+2026-01-21 20:48:41,986 - MWATools.MWALogging - INFO - ✅ 成功连接到模拟器: <maa.controller.AdbController object at 0x0000028C5EFFB4D0>
+2026-01-21 20:48:41,986 - MWATools.MWALogging - ERROR - ❌ 连接状态验证失败
+2026-01-21 20:48:41,986 - MWATools.MWALogging - ERROR - 连接过程中发生错误: 连接状态验证失败
+2026-01-21 20:48:41,986 - MWATools.MWALogging - ERROR - ADB服务可能未正常运行
+2026-01-21 20:51:43,480 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 20:51:43,719 - MWATools.MWALogging - INFO - Alcove搜索到了3个设备
+2026-01-21 20:51:48,027 - MWATools.MWALogging - INFO - 用户选择了设备: ('MuMuPlayer12 v5', '127.0.0.1:16384')
+2026-01-21 20:51:48,027 - MWATools.MWALogging - INFO - 正在尝试连接设备: MuMuPlayer12 v5 - 127.0.0.1:16384
+2026-01-21 20:51:48,198 - MWATools.MWALogging - INFO - ✅ 成功连接到模拟器: <maa.controller.AdbController object at 0x00000191D6DEF4D0>
+2026-01-21 20:51:48,198 - MWATools.MWALogging - ERROR - ❌ ADB控制器缺少is_connected方法
+2026-01-21 20:51:48,199 - MWATools.MWALogging - ERROR - 连接过程中发生错误: ADB控制器实现不完整
+2026-01-21 20:54:55,095 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 20:54:55,419 - MWATools.MWALogging - INFO - Alcove搜索到了3个设备
+2026-01-21 20:55:02,460 - MWATools.MWALogging - INFO - 用户选择了设备: ('MuMuPlayer12 v5', '127.0.0.1:16384')
+2026-01-21 20:55:02,460 - MWATools.MWALogging - INFO - 正在尝试连接设备: MuMuPlayer12 v5 - 127.0.0.1:16384
+2026-01-21 20:55:02,653 - MWATools.MWALogging - INFO - ✅ 成功连接到模拟器: <maa.controller.AdbController object at 0x0000011B457C34D0>
+2026-01-21 20:55:02,674 - MWATools.MWALogging - INFO - ✅ 连接状态验证通过
+2026-01-21 20:55:02,676 - MWATools.MWALogging - INFO - ✅ 更新ADB路径配置: M:\mumu\MuMu Player 12\nx_main\adb.exe
+2026-01-21 20:55:02,679 - MWATools.MWALogging - INFO - ✅ 更新ADB地址配置: 127.0.0.1:16384
+2026-01-21 20:55:16,629 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 20:55:16,843 - MWATools.MWALogging - INFO - Alcove搜索到了3个设备
+2026-01-21 20:55:20,707 - MWATools.MWALogging - INFO - 用户选择了设备: ('LDPlayer', 'emulator-5554')
+2026-01-21 20:55:20,707 - MWATools.MWALogging - INFO - 正在尝试连接设备: LDPlayer - emulator-5554
+2026-01-21 20:55:32,474 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 20:55:32,550 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2026-01-21 20:55:32,551 - MWATools.MWALogging - INFO - 自动选择了唯一设备: ('LDPlayer', 'emulator-5554')
+2026-01-21 20:55:32,551 - MWATools.MWALogging - INFO - 正在尝试连接设备: LDPlayer - emulator-5554
+2026-01-21 20:55:33,557 - MWATools.MWALogging - INFO - ✅ 成功连接到模拟器: <maa.controller.AdbController object at 0x00000201D85B34D0>
+2026-01-21 20:55:33,576 - MWATools.MWALogging - INFO - ✅ 连接状态验证通过
+2026-01-21 20:55:33,578 - MWATools.MWALogging - INFO - ✅ 更新ADB路径配置: M:\leidian\LDPlayer9\adb.exe
+2026-01-21 20:55:33,591 - MWATools.MWALogging - INFO - ✅ 更新ADB地址配置: emulator-5554
+2026-01-21 20:55:54,474 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 20:55:54,509 - MWATools.MWALogging - INFO - Alcove搜索到了0个设备
+2026-01-21 20:55:54,509 - MWATools.MWALogging - ERROR - 未找到可用设备控制器
+2026-01-21 20:57:37,641 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 20:57:37,665 - MWATools.MWALogging - INFO - Alcove搜索到了0个设备
+2026-01-21 20:57:37,665 - MWATools.MWALogging - ERROR - ❌ 未找到可用设备控制器，请检查：
+2026-01-21 20:57:37,665 - MWATools.MWALogging - ERROR - 1. 模拟器是否已启动
+2026-01-21 20:57:37,665 - MWATools.MWALogging - ERROR - 2. ADB服务是否正常运行
+2026-01-21 20:57:37,665 - MWATools.MWALogging - ERROR - 3. 设备是否已授权
+2026-01-21 21:02:00,090 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 21:02:00,114 - MWATools.MWALogging - INFO - Alcove搜索到了0个设备
+2026-01-21 21:02:00,114 - MWATools.MWALogging - ERROR - ❌ 未找到可用设备控制器，请检查：
+2026-01-21 21:02:00,114 - MWATools.MWALogging - ERROR - 1. 模拟器是否已启动
+2026-01-21 21:02:00,114 - MWATools.MWALogging - ERROR - 2. ADB服务是否正常运行
+2026-01-21 21:02:00,114 - MWATools.MWALogging - ERROR - 3. 设备是否已授权
+2026-01-21 21:30:18,215 - MWATools.MWALogging - ERROR - 加载控制器配置失败: 'controller'
+2026-01-21 21:34:22,444 - MWATools.MWALogging - ERROR - 加载控制器配置失败: 配置文件中缺少'controller'字段
+2026-01-21 21:36:10,657 - MWATools.MWALogging - ERROR - 加载控制器配置失败: 配置文件中缺少'controller'字段
+请按以下格式配置:
+controller:
+  - name: 安卓端或win32端
+    adb_path: adb路径
+    address: 设备地址
+完整的示例配置文件已自动生成
+2026-01-21 21:36:36,427 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 21:36:36,855 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2026-01-21 21:36:36,855 - MWATools.MWALogging - INFO - 自动选择了唯一设备: ('MuMuPlayer12 v5', '127.0.0.1:16384')
+2026-01-21 21:36:36,855 - MWATools.MWALogging - INFO - 正在尝试连接设备: MuMuPlayer12 v5 - 127.0.0.1:16384
+2026-01-21 21:36:37,286 - MWATools.MWALogging - INFO - ✅ 成功连接到模拟器: <maa.controller.AdbController object at 0x000002107E8734D0>
+2026-01-21 21:36:37,319 - MWATools.MWALogging - INFO - 连接状态验证通过
+2026-01-21 21:36:37,321 - MWATools.MWALogging - ERROR - 修改ADB路径失败: list indices must be integers or slices, not str
+2026-01-21 21:36:37,321 - MWATools.MWALogging - ERROR - 配置更新失败: list indices must be integers or slices, not str
+2026-01-21 21:36:37,321 - MWATools.MWALogging - ERROR - 连接过程中发生错误: list indices must be integers or slices, not str
+2026-01-21 21:38:13,840 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 21:38:14,028 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2026-01-21 21:38:14,031 - MWATools.MWALogging - INFO - 自动选择了唯一设备: ('MuMuPlayer12 v5', '127.0.0.1:16384')
+2026-01-21 21:38:14,031 - MWATools.MWALogging - INFO - 正在尝试连接设备: MuMuPlayer12 v5 - 127.0.0.1:16384
+2026-01-21 21:38:14,240 - MWATools.MWALogging - INFO - ✅ 成功连接到模拟器: <maa.controller.AdbController object at 0x000001ADB8C434D0>
+2026-01-21 21:38:14,260 - MWATools.MWALogging - INFO - 连接状态验证通过
+2026-01-21 21:38:14,263 - MWATools.MWALogging - ERROR - 修改ADB路径失败: 0
+2026-01-21 21:38:14,264 - MWATools.MWALogging - ERROR - 配置更新失败: 0
+2026-01-21 21:38:14,264 - MWATools.MWALogging - ERROR - 连接过程中发生错误: 0
+2026-01-21 21:42:26,284 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 21:42:26,496 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2026-01-21 21:42:26,496 - MWATools.MWALogging - INFO - 自动选择了唯一设备: ('MuMuPlayer12 v5', '127.0.0.1:16384')
+2026-01-21 21:42:26,497 - MWATools.MWALogging - INFO - 正在尝试连接设备: MuMuPlayer12 v5 - 127.0.0.1:16384
+2026-01-21 21:42:26,711 - MWATools.MWALogging - INFO - ✅ 成功连接到模拟器: <maa.controller.AdbController object at 0x000001E55C4774D0>
+2026-01-21 21:42:26,748 - MWATools.MWALogging - INFO - 连接状态验证通过
+2026-01-21 21:42:26,751 - MWATools.MWALogging - INFO - 更新ADB路径配置: M:\mumu\MuMu Player 12\nx_main\adb.exe
+2026-01-21 21:42:26,767 - MWATools.MWALogging - INFO - 更新ADB地址配置: 127.0.0.1:16384
+2026-01-21 21:42:43,780 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 21:42:43,806 - MWATools.MWALogging - INFO - Alcove搜索到了0个设备
+2026-01-21 21:42:43,806 - MWATools.MWALogging - ERROR - 未找到可用设备控制器，请检查：
+2026-01-21 21:42:43,806 - MWATools.MWALogging - ERROR - 1. 模拟器是否已启动
+2026-01-21 21:42:43,806 - MWATools.MWALogging - ERROR - 2. ADB服务是否正常运行
+2026-01-21 21:42:43,806 - MWATools.MWALogging - ERROR - 3. 设备是否已授权
+2026-01-21 21:43:34,461 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 21:43:34,690 - MWATools.MWALogging - INFO - Alcove搜索到了3个设备
+2026-01-21 21:43:39,587 - MWATools.MWALogging - INFO - 用户选择了设备: ('LDPlayer', 'emulator-5554')
+2026-01-21 21:43:39,587 - MWATools.MWALogging - INFO - 正在尝试连接设备: LDPlayer - emulator-5554
+2026-01-21 21:43:44,655 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 21:43:44,872 - MWATools.MWALogging - INFO - Alcove搜索到了3个设备
+2026-01-21 21:43:49,411 - MWATools.MWALogging - INFO - 用户选择了设备: ('MuMuPlayer12 v5', '127.0.0.1:16384')
+2026-01-21 21:43:49,411 - MWATools.MWALogging - INFO - 正在尝试连接设备: MuMuPlayer12 v5 - 127.0.0.1:16384
+2026-01-21 21:43:49,583 - MWATools.MWALogging - INFO - ✅ 成功连接到模拟器: <maa.controller.AdbController object at 0x0000022F425EF4D0>
+2026-01-21 21:43:49,603 - MWATools.MWALogging - INFO - 连接状态验证通过
+2026-01-21 21:43:49,605 - MWATools.MWALogging - INFO - 更新ADB路径配置: M:\mumu\MuMu Player 12\nx_main\adb.exe
+2026-01-21 21:43:49,608 - MWATools.MWALogging - INFO - 更新ADB地址配置: 127.0.0.1:16384
+2026-01-21 21:43:57,916 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 21:43:57,979 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2026-01-21 21:43:57,979 - MWATools.MWALogging - INFO - 自动选择了唯一设备: ('LDPlayer', 'emulator-5554')
+2026-01-21 21:43:57,979 - MWATools.MWALogging - INFO - 正在尝试连接设备: LDPlayer - emulator-5554
+2026-01-21 21:43:58,645 - MWATools.MWALogging - INFO - ✅ 成功连接到模拟器: <maa.controller.AdbController object at 0x000001B25D8674D0>
+2026-01-21 21:43:58,664 - MWATools.MWALogging - INFO - 连接状态验证通过
+2026-01-21 21:43:58,666 - MWATools.MWALogging - INFO - 更新ADB路径配置: M:\leidian\LDPlayer9\adb.exe
+2026-01-21 21:43:58,669 - MWATools.MWALogging - INFO - 更新ADB地址配置: emulator-5554
+2026-01-21 21:46:25,756 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 21:46:25,824 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2026-01-21 21:46:25,825 - MWATools.MWALogging - INFO - 自动选择了唯一设备: ('LDPlayer', 'emulator-5554')
+2026-01-21 21:46:25,825 - MWATools.MWALogging - INFO - 正在尝试连接设备: LDPlayer - emulator-5554
+2026-01-21 21:46:26,390 - MWATools.MWALogging - INFO - ✅ 成功连接到模拟器: <maa.controller.AdbController object at 0x000001474A2B74D0>
+2026-01-21 21:46:26,410 - MWATools.MWALogging - INFO - 连接状态验证通过
+2026-01-21 21:46:26,412 - MWATools.MWALogging - INFO - 更新ADB路径配置: M:\leidian\LDPlayer9\adb.exe
+2026-01-21 21:46:26,416 - MWATools.MWALogging - INFO - 更新ADB地址配置: emulator-5554
+2026-01-21 21:48:49,713 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 21:48:49,778 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2026-01-21 21:48:49,789 - MWATools.MWALogging - INFO - 自动选择了唯一设备: ('LDPlayer', 'emulator-5554')
+2026-01-21 21:48:49,789 - MWATools.MWALogging - INFO - 正在尝试连接设备: LDPlayer - emulator-5554
+2026-01-21 21:48:50,346 - MWATools.MWALogging - INFO - ✅ 成功连接到模拟器: <maa.controller.AdbController object at 0x000002BAA06CB4D0>
+2026-01-21 21:48:50,365 - MWATools.MWALogging - INFO - 连接状态验证通过
+2026-01-21 21:48:50,367 - MWATools.MWALogging - INFO - 更新ADB路径配置: M:\leidian\LDPlayer9\adb.exe
+2026-01-21 21:48:50,370 - MWATools.MWALogging - INFO - 更新ADB地址配置: emulator-5554
+2026-01-21 21:55:14,202 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 21:55:14,265 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2026-01-21 21:55:14,266 - MWATools.MWALogging - INFO - 自动选择了唯一设备: ('LDPlayer', 'emulator-5554')
+2026-01-21 21:55:14,266 - MWATools.MWALogging - INFO - 正在尝试连接设备: LDPlayer - emulator-5554
+2026-01-21 21:55:15,044 - MWATools.MWALogging - INFO - ✅ 成功连接到模拟器: <maa.controller.AdbController object at 0x000001ADECF7F4D0>
+2026-01-21 21:55:15,064 - MWATools.MWALogging - INFO - 连接状态验证通过
+2026-01-21 21:55:15,066 - MWATools.MWALogging - INFO - 更新ADB路径配置: M:\leidian\LDPlayer9\adb.exe
+2026-01-21 21:55:15,070 - MWATools.MWALogging - INFO - 更新ADB地址配置: emulator-5554
+2026-01-21 21:58:51,510 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 21:58:51,839 - MWATools.MWALogging - INFO - Alcove搜索到了2个设备
+2026-01-21 21:58:55,827 - MWATools.MWALogging - INFO - 用户选择了设备: ('LDPlayer', 'emulator-5554')
+2026-01-21 21:58:55,827 - MWATools.MWALogging - INFO - 正在尝试连接设备: LDPlayer - emulator-5554
+2026-01-21 21:58:56,337 - MWATools.MWALogging - INFO - ✅ 成功连接到模拟器: <maa.controller.AdbController object at 0x00000289C4ECF4D0>
+2026-01-21 21:58:56,354 - MWATools.MWALogging - INFO - 连接状态验证通过
+2026-01-21 21:58:56,356 - MWATools.MWALogging - INFO - 更新ADB路径配置: M:\leidian\LDPlayer9\adb.exe
+2026-01-21 21:58:56,359 - MWATools.MWALogging - INFO - 更新ADB地址配置: emulator-5554
+2026-01-21 21:59:04,215 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 21:59:04,441 - MWATools.MWALogging - INFO - Alcove搜索到了2个设备
+2026-01-21 21:59:09,154 - MWATools.MWALogging - INFO - 用户选择了设备: ('MuMuPlayer12 v5', '127.0.0.1:16384')
+2026-01-21 21:59:09,154 - MWATools.MWALogging - INFO - 正在尝试连接设备: MuMuPlayer12 v5 - 127.0.0.1:16384
+2026-01-21 21:59:09,496 - MWATools.MWALogging - INFO - ✅ 成功连接到模拟器: <maa.controller.AdbController object at 0x0000022B7EFCB4D0>
+2026-01-21 21:59:09,515 - MWATools.MWALogging - INFO - 连接状态验证通过
+2026-01-21 21:59:09,517 - MWATools.MWALogging - INFO - 更新ADB路径配置: M:\mumu\MuMu Player 12\nx_main\adb.exe
+2026-01-21 21:59:09,521 - MWATools.MWALogging - INFO - 更新ADB地址配置: 127.0.0.1:16384
+2026-01-21 21:59:14,835 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 21:59:15,065 - MWATools.MWALogging - INFO - Alcove搜索到了3个设备
+2026-01-21 21:59:20,472 - MWATools.MWALogging - INFO - 用户选择了设备: ('LDPlayer', 'emulator-5554')
+2026-01-21 21:59:20,472 - MWATools.MWALogging - INFO - 正在尝试连接设备: LDPlayer - emulator-5554
+2026-01-21 21:59:20,996 - MWATools.MWALogging - INFO - ✅ 成功连接到模拟器: <maa.controller.AdbController object at 0x00000155ECF3B4D0>
+2026-01-21 21:59:21,014 - MWATools.MWALogging - INFO - 连接状态验证通过
+2026-01-21 21:59:21,016 - MWATools.MWALogging - INFO - 更新ADB路径配置: M:\leidian\LDPlayer9\adb.exe
+2026-01-21 21:59:21,020 - MWATools.MWALogging - INFO - 更新ADB地址配置: emulator-5554
+2026-01-21 22:00:43,355 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 22:00:43,605 - MWATools.MWALogging - INFO - Alcove搜索到了2个设备
+2026-01-21 22:00:47,368 - MWATools.MWALogging - INFO - 用户选择了设备: ('LDPlayer', 'emulator-5554')
+2026-01-21 22:00:47,368 - MWATools.MWALogging - INFO - 正在尝试连接设备: LDPlayer - emulator-5554
+2026-01-21 22:00:56,104 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 22:00:56,327 - MWATools.MWALogging - INFO - Alcove搜索到了2个设备
+2026-01-21 22:00:58,640 - MWATools.MWALogging - INFO - 用户选择了设备: ('MuMuPlayer12 v5', '127.0.0.1:16384')
+2026-01-21 22:00:58,640 - MWATools.MWALogging - INFO - 正在尝试连接设备: MuMuPlayer12 v5 - 127.0.0.1:16384
+2026-01-21 22:00:59,015 - MWATools.MWALogging - INFO - ✅ 成功连接到模拟器: <maa.controller.AdbController object at 0x000002AE7E43F4D0>
+2026-01-21 22:00:59,035 - MWATools.MWALogging - INFO - 连接状态验证通过
+2026-01-21 22:00:59,038 - MWATools.MWALogging - INFO - 更新ADB路径配置: M:\mumu\MuMu Player 12\nx_main\adb.exe
+2026-01-21 22:00:59,041 - MWATools.MWALogging - INFO - 更新ADB地址配置: 127.0.0.1:16384
+2026-01-21 22:01:02,786 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 22:01:03,013 - MWATools.MWALogging - INFO - Alcove搜索到了3个设备
+2026-01-21 22:01:05,233 - MWATools.MWALogging - INFO - 用户选择了设备: ('LDPlayer', '127.0.0.1:16384')
+2026-01-21 22:01:05,233 - MWATools.MWALogging - INFO - 正在尝试连接设备: LDPlayer - 127.0.0.1:16384
+2026-01-21 22:13:16,241 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 22:13:16,636 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2026-01-21 22:13:16,636 - MWATools.MWALogging - INFO - 自动选择了唯一设备: ('MuMuPlayer12 v5', '127.0.0.1:16384')
+2026-01-21 22:13:16,637 - MWATools.MWALogging - INFO - 正在尝试连接设备: MuMuPlayer12 v5 - 127.0.0.1:16384
+2026-01-21 22:13:16,809 - MWATools.MWALogging - INFO - ✅ 成功连接到模拟器: <maa.controller.AdbController object at 0x00000213CA663620>
+2026-01-21 22:13:16,841 - MWATools.MWALogging - INFO - 连接状态验证通过
+2026-01-21 22:13:16,843 - MWATools.MWALogging - INFO - 更新ADB路径配置: M:\mumu\MuMu Player 12\nx_main\adb.exe
+2026-01-21 22:13:16,846 - MWATools.MWALogging - INFO - 更新ADB地址配置: 127.0.0.1:16384
+2026-01-21 22:13:59,024 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 22:13:59,224 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2026-01-21 22:13:59,224 - MWATools.MWALogging - INFO - 自动选择了唯一设备: ('MuMuPlayer12 v5', '127.0.0.1:16384')
+2026-01-21 22:13:59,224 - MWATools.MWALogging - INFO - 正在尝试连接设备: MuMuPlayer12 v5 - 127.0.0.1:16384
+2026-01-21 22:14:01,915 - MWATools.MWALogging - INFO - ✅ 成功连接到模拟器: <maa.controller.AdbController object at 0x000001EB721A7620>
+2026-01-21 22:14:01,936 - MWATools.MWALogging - INFO - 连接状态验证通过
+2026-01-21 22:14:01,938 - MWATools.MWALogging - INFO - 更新ADB路径配置: M:\mumu\MuMu Player 12\nx_main\adb.exe
+2026-01-21 22:14:01,942 - MWATools.MWALogging - INFO - 更新ADB地址配置: 127.0.0.1:16384
+2026-01-21 22:31:19,413 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 22:31:19,475 - MWATools.MWALogging - INFO - Alcove搜索到了1个设备
+2026-01-21 22:31:19,475 - MWATools.MWALogging - INFO - 自动选择了唯一设备: ('LDPlayer', 'emulator-5554')
+2026-01-21 22:31:19,475 - MWATools.MWALogging - INFO - 正在尝试连接设备: LDPlayer - emulator-5554
+2026-01-21 22:31:20,215 - MWATools.MWALogging - INFO - ✅ 成功连接到模拟器: <maa.controller.AdbController object at 0x000002063DBCB620>
+2026-01-21 22:31:20,233 - MWATools.MWALogging - INFO - 连接状态验证通过
+2026-01-21 22:31:20,235 - MWATools.MWALogging - INFO - 更新ADB路径配置: M:\leidian\LDPlayer9\adb.exe
+2026-01-21 22:31:20,238 - MWATools.MWALogging - INFO - 更新ADB地址配置: emulator-5554
+2026-01-21 22:44:08,251 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 22:44:08,313 - MWATools.MWALogging - INFO - Alcove搜索到了0个设备
+2026-01-21 22:44:08,313 - MWATools.MWALogging - ERROR - 未找到可用设备控制器，请检查：
+2026-01-21 22:44:08,313 - MWATools.MWALogging - ERROR - 1. 模拟器是否已启动
+2026-01-21 22:44:08,313 - MWATools.MWALogging - ERROR - 2. ADB服务是否正常运行
+2026-01-21 22:44:08,313 - MWATools.MWALogging - ERROR - 3. 设备是否已授权
+2026-01-21 22:45:01,900 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 22:45:01,955 - MWATools.MWALogging - INFO - Alcove搜索到了2个设备
+2026-01-21 22:45:08,706 - MWATools.MWALogging - INFO - 用户选择了设备: ('LDPlayer', '127.0.0.1:5555')
+2026-01-21 22:45:08,706 - MWATools.MWALogging - INFO - 正在尝试连接设备: LDPlayer - 127.0.0.1:5555
+2026-01-21 22:45:09,277 - MWATools.MWALogging - INFO -  成功连接到模拟器: <maa.controller.AdbController object at 0x0000026750D2B620>
+2026-01-21 22:45:09,295 - MWATools.MWALogging - INFO - 连接状态验证通过
+2026-01-21 22:45:09,297 - MWATools.MWALogging - INFO - 更新ADB路径配置: M:\leidian\LDPlayer9\adb.exe
+2026-01-21 22:45:09,300 - MWATools.MWALogging - INFO - 更新ADB地址配置: 127.0.0.1:5555
+2026-01-21 22:47:18,668 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 22:47:18,730 - MWATools.MWALogging - INFO - Alcove搜索到了2个设备
+2026-01-21 22:47:21,629 - MWATools.MWALogging - INFO - 用户选择了设备: ('LDPlayer', '127.0.0.1:5555')
+2026-01-21 22:47:21,629 - MWATools.MWALogging - INFO - 正在尝试连接设备: LDPlayer - 127.0.0.1:5555
+2026-01-21 22:47:22,213 - MWATools.MWALogging - INFO -  成功连接到模拟器: <maa.controller.AdbController object at 0x000002967FBCB620>
+2026-01-21 22:47:22,232 - MWATools.MWALogging - INFO - 连接状态验证通过
+2026-01-21 22:47:22,234 - MWATools.MWALogging - INFO - 更新ADB路径配置: M:\leidian\LDPlayer9\adb.exe
+2026-01-21 22:47:22,237 - MWATools.MWALogging - INFO - 更新ADB地址配置: 127.0.0.1:5555
+2026-01-21 22:49:44,520 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 22:49:44,616 - MWATools.MWALogging - INFO - Alcove搜索到了2个设备
+2026-01-21 22:49:48,055 - MWATools.MWALogging - INFO - 用户选择了设备: ('LDPlayer', '127.0.0.1:5555')
+2026-01-21 22:49:48,055 - MWATools.MWALogging - INFO - 正在尝试连接设备: LDPlayer - 127.0.0.1:5555
+2026-01-21 22:49:48,633 - MWATools.MWALogging - INFO -  成功连接到模拟器: <maa.controller.AdbController object at 0x00000154FE87F4D0>
+2026-01-21 22:49:48,654 - MWATools.MWALogging - INFO - 连接状态验证通过
+2026-01-21 22:49:48,656 - MWATools.MWALogging - INFO - 更新ADB路径配置: M:\leidian\LDPlayer9\adb.exe
+2026-01-21 22:49:48,659 - MWATools.MWALogging - INFO - 更新ADB地址配置: 127.0.0.1:5555
+2026-01-21 22:50:29,760 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 22:50:29,825 - MWATools.MWALogging - INFO - Alcove搜索到了2个设备
+2026-01-21 22:50:32,484 - MWATools.MWALogging - INFO - 用户选择了设备: ('LDPlayer', '127.0.0.1:5555')
+2026-01-21 22:50:32,484 - MWATools.MWALogging - INFO - 正在尝试连接设备: LDPlayer - 127.0.0.1:5555
+2026-01-21 22:50:33,057 - MWATools.MWALogging - INFO -  成功连接到模拟器: <maa.controller.AdbController object at 0x0000029BFBA3B4D0>
+2026-01-21 22:50:33,075 - MWATools.MWALogging - INFO - 连接状态验证通过
+2026-01-21 22:50:33,077 - MWATools.MWALogging - INFO - 更新ADB路径配置: M:\leidian\LDPlayer9\adb.exe
+2026-01-21 22:50:33,080 - MWATools.MWALogging - INFO - 更新ADB地址配置: 127.0.0.1:5555
+2026-01-21 22:50:33,080 - MWATools.MWALogging - ERROR - 配置更新失败: 'AdbController' object has no attribute 'name'
+2026-01-21 22:50:33,080 - MWATools.MWALogging - ERROR - 连接过程中发生错误: 'AdbController' object has no attribute 'name'
+2026-01-21 22:51:54,705 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 22:51:54,765 - MWATools.MWALogging - INFO - Alcove搜索到了2个设备
+2026-01-21 22:51:57,545 - MWATools.MWALogging - INFO - 用户选择了设备: ('LDPlayer', '127.0.0.1:5555')
+2026-01-21 22:51:57,545 - MWATools.MWALogging - INFO - 正在尝试连接设备: LDPlayer - 127.0.0.1:5555
+2026-01-21 22:51:58,134 - MWATools.MWALogging - INFO -  成功连接到模拟器: <maa.controller.AdbController object at 0x0000019FBA12B4D0>
+2026-01-21 22:51:58,152 - MWATools.MWALogging - INFO - 连接状态验证通过
+2026-01-21 22:51:58,155 - MWATools.MWALogging - INFO - 更新ADB路径配置: M:\leidian\LDPlayer9\adb.exe
+2026-01-21 22:51:58,157 - MWATools.MWALogging - INFO - 更新ADB地址配置: 127.0.0.1:5555
+2026-01-21 22:52:25,642 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 22:52:25,709 - MWATools.MWALogging - INFO - Alcove搜索到了2个设备
+2026-01-21 22:52:27,979 - MWATools.MWALogging - INFO - 用户选择了设备: ('LDPlayer', '127.0.0.1:5555')
+2026-01-21 22:52:27,979 - MWATools.MWALogging - INFO - 正在尝试连接设备: LDPlayer - 127.0.0.1:5555
+2026-01-21 22:52:28,544 - MWATools.MWALogging - INFO -  成功连接到模拟器: <maa.controller.AdbController object at 0x00000224D89FB4D0>
+2026-01-21 22:52:28,561 - MWATools.MWALogging - INFO - 连接状态验证通过
+2026-01-21 22:52:28,563 - MWATools.MWALogging - INFO - 更新ADB路径配置: M:\leidian\LDPlayer9\adb.exe
+2026-01-21 22:52:28,566 - MWATools.MWALogging - INFO - 更新ADB地址配置: 127.0.0.1:5555
+2026-01-21 23:12:46,604 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 23:12:46,663 - MWATools.MWALogging - INFO - Alcove搜索到了2个设备
+2026-01-21 23:12:49,818 - MWATools.MWALogging - INFO - 用户选择了设备: ('LDPlayer', '127.0.0.1:5555')
+2026-01-21 23:12:49,818 - MWATools.MWALogging - INFO - 正在尝试连接设备: LDPlayer - 127.0.0.1:5555
+2026-01-21 23:12:50,395 - MWATools.MWALogging - INFO -  成功连接到模拟器: <maa.controller.AdbController object at 0x00000276C26834D0>
+2026-01-21 23:12:50,414 - MWATools.MWALogging - INFO - 连接状态验证通过
+2026-01-21 23:12:50,416 - MWATools.MWALogging - INFO - 更新ADB路径配置: M:\leidian\LDPlayer9\adb.exe
+2026-01-21 23:12:50,419 - MWATools.MWALogging - INFO - 更新ADB地址配置: 127.0.0.1:5555
+2026-01-21 23:13:47,949 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 23:13:48,012 - MWATools.MWALogging - INFO - Alcove搜索到了2个设备
+2026-01-21 23:13:51,739 - MWATools.MWALogging - INFO - 用户选择了设备: ('LDPlayer', '127.0.0.1:5555')
+2026-01-21 23:13:51,739 - MWATools.MWALogging - INFO - 正在尝试连接设备: LDPlayer - 127.0.0.1:5555
+2026-01-21 23:13:52,320 - MWATools.MWALogging - INFO -  成功连接到模拟器: <maa.controller.AdbController object at 0x00000121DFB434D0>
+2026-01-21 23:13:52,338 - MWATools.MWALogging - INFO - 连接状态验证通过
+2026-01-21 23:13:52,341 - MWATools.MWALogging - INFO - 更新ADB路径配置: M:\leidian\LDPlayer9\adb.exe
+2026-01-21 23:13:52,344 - MWATools.MWALogging - INFO - 更新ADB地址配置: 127.0.0.1:5555
+2026-01-21 23:14:12,053 - MWATools.MWALogging - INFO - 成功加载控制器配置, interface路径: 未指定
+2026-01-21 23:14:12,118 - MWATools.MWALogging - INFO - Alcove搜索到了2个设备
+2026-01-21 23:14:14,419 - MWATools.MWALogging - INFO - 用户选择了设备: ('LDPlayer', '127.0.0.1:5555')
+2026-01-21 23:14:14,419 - MWATools.MWALogging - INFO - 正在尝试连接设备: LDPlayer - 127.0.0.1:5555
+2026-01-21 23:14:15,054 - MWATools.MWALogging - INFO -  成功连接到模拟器: <maa.controller.AdbController object at 0x00000216BE1AB620>
+2026-01-21 23:14:15,073 - MWATools.MWALogging - INFO - 连接状态验证通过
+2026-01-21 23:14:15,076 - MWATools.MWALogging - INFO - 更新ADB路径配置: M:\leidian\LDPlayer9\adb.exe
+2026-01-21 23:14:15,078 - MWATools.MWALogging - INFO - 更新ADB地址配置: 127.0.0.1:5555
