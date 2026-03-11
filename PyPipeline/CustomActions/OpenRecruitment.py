@@ -9,20 +9,139 @@ class OpenRecruitment(CustomAction):
         context: Context,
         argv: CustomAction.RunArg,
     ) -> bool:
-        logger.info("器者征集任务开始")
-        layer = 0
-        while True:
-            if layer == 0:
-                open_recruitment_detail = context.run_recognition("skip_return_Plot",
+        # self._entry_openrecruitment(context)
+        _, openrecruitmenting, openrecruitmented, openrecruitment_letter= self._scan_openrecruitment_data(context,argv)
+        if openrecruitmented == 0 and openrecruitmenting != 4 and openrecruitment_letter != 0:
+            self._start_openrecruitment(context, argv)
+            self._return_home(context, argv)
+        elif openrecruitmenting == 4:
+            logger.info("器者征集已满")
+            self._return_home(context, argv)
+        elif openrecruitmented != 0:
+            logger.info("器者征集可领取")
+            self._confirm_openrecruitment(context, argv)
+        else:
+            self._return_home(context, argv)
+        return True
+    def _entry_openrecruitment(
+        self, 
+        context: Context,
+        argv: CustomAction.RunArg
+    ):
+        logger.info("打开器者征集界面")
+        context.run_task("entry_openrecruitment", pipeline_override={"entry_openrecruitment":{
+                                                                    "roi": [904,540,176,58],
+                                                                    "recognition": "OCR",
+                                                                    "expected": "器者征集",
+                                                                    "action": "Click"
+                                                                    }})
+    def _scan_openrecruitment_data(
+        self,
+        context: Context,
+        argv: CustomAction.RunArg
+        ):
+        openrecruitment_queue = context.run_recognition("openrecruitment_data",
                                 image=context.tasker.controller.post_screencap().wait().get(),
-                                pipeline_override={"skip_return_Plot":{"recognition": "OCR",
-                                                                        "expected": "器者征集"}})
-                if open_recruitment_detail:
-                    clicked_recruitment = context.run_task("open_recruitment", pipeline_override={"open_recruitment":{"recognition": "OCR",
-                                                                                                "expected": "器者征集",
-                                                                                                "action":"Click"}})
-                    print(clicked_recruitment.status)
-                    if clicked_recruitment.status.succeeded is True:
-                        layer = 1
-                    logger.info("点击器者征集按钮")
-
+                                pipeline_override={"openrecruitment_data":{
+                                                                "roi": [1171,84,79,50],
+                                                                "recognition": "OCR",
+                                                                "only_rec": True}}).best_result.text.split("/")
+        openrecruitmenting = context.run_recognition("openrecruitmenting",
+                             image=context.tasker.controller.post_screencap().wait().get(),
+                             pipeline_override={"openrecruitmenting":{
+                                                            "roi": [1169,129,71,42],
+                                                            "recognition": "OCR",
+                                                            "only_rec": True}}).best_result.text[0]
+        openrecruitmented = context.run_recognition("openrecruitmented",
+                            image=context.tasker.controller.post_screencap().wait().get(),
+                            pipeline_override={"openrecruitmented":{
+                                                            "roi": [1165,168,79,50],
+                                                            "recognition": "OCR",
+                                                            "only_rec": True}}).best_result.text[0]
+        openrecruitment_letter = context.run_recognition("openrecruitment_letter",
+                                 image=context.tasker.controller.post_screencap().wait().get(),
+                                 pipeline_override={"openrecruitment_letter":{
+                                                                "roi": [705,6,73,42],
+                                                                "recognition": "OCR",
+                                                                "replace": ["。", "0"],
+                                                                "expected": r"(\d+)",
+                                                                "only_rec": True}}).best_result.text
+        print("征集队列:", openrecruitment_queue)
+        print("征集中:", openrecruitmenting)
+        print("已征集:", openrecruitmented)
+        print("当前信件:", openrecruitment_letter)
+        return [[int(i) for i in openrecruitment_queue], int(openrecruitmenting), int(openrecruitmented), int(openrecruitment_letter)]
+    def _start_openrecruitment(
+        self,
+        context: Context,
+        argv: CustomAction.RunArg
+        ):
+        logger.info("开始器者征集")
+        context.run_task("start_openrecruitment", pipeline_override={"start_openrecruitment":{
+                                                                "roi": [1044,622,143,48],
+                                                                "recognition": "OCR",
+                                                                "expected": "开始征集",
+                                                                "action": "Click"
+                                                                }})
+        choose_click_box = context.run_recognition("choose_openrecruitment_count", 
+                                                   image=context.tasker.controller.post_screencap().wait().get(),
+                                                   pipeline_override={"choose_openrecruitment_count":{
+                                                                "roi": [744,324,48,46],
+                                                                "recognition": "OCR",
+                                                                "expected": "\+"}}).best_result.box
+        for i in range(4):
+            context.tasker.controller.post_click(choose_click_box[0]+24, choose_click_box[1]+23)
+            time.sleep(0.5)
+        choose_finish_box = context.run_task("choose_openrecruitment_count", 
+                                                   pipeline_override={"choose_openrecruitment_count":{
+                                                                "roi": [672,394,190,89],
+                                                                "recognition": "TemplateMatch",
+                                                                "template": "collect/04.png",
+                                                                "action": "Click"}})
+        
+    def _confirm_openrecruitment(
+        self,
+        context: Context,
+        argv: CustomAction.RunArg
+        ):
+        logger.info("正在确认器者征集")
+        context.run_task("switch_to_openrecruitment_queue", pipeline_override={"switch_to_openrecruitment_queue":{
+                                                                "roi": [1169,301,75,116],
+                                                                "recognition": "TemplateMatch",
+                                                                "template": "collect/02.png",
+                                                                "action": "Click"
+                                                                }})
+        time.sleep(0.5)
+        context.run_task("confirm_openrecruitment", pipeline_override={"confirm_openrecruitment":{
+                                                                "roi": [1034,613,136,51],
+                                                                "recognition": "OCR",
+                                                                "expected": "全部确认",
+                                                                "action": "Click"}})
+        time.sleep(0.5)
+        context.run_task("confirm_openrecruitment_skip", pipeline_override={"confirm_openrecruitment_skip":{
+                                                                "action": "Click",
+                                                                "target": [1157,12,83,73]}})
+        time.sleep(1)
+        context.run_task("confirm_openrecruitment_again", pipeline_override={"confirm_openrecruitment_again":{
+                                                                "roi": [520,579,250,83],
+                                                                "recognition": "TemplateMatch",
+                                                                "template": "collect/04.png",
+                                                                "action": "Click"}})
+        detail = context.run_task("dian",
+                                pipeline_override={"dian":{"recognition": "OCR",
+                                                                    "expected": "点",
+                                                                    "roi":[978,106,240,502],
+                                                                    "next":"ji"},
+                                                    "ji":{"recognition": "OCR",
+                                                                    "expected": "击",
+                                                                    "roi":[978,106,240,502],
+                                                                    "action": "Click"}})
+        self.run(context,argv)
+    def _return_home(
+        self,
+        context: Context,
+        argv: CustomAction.RunArg
+        ):
+        context.run_task("return_home", pipeline_override={"return_home":{
+                                                           "action": "Custom",
+                                                           "custom_action": "ReturnHome"}})

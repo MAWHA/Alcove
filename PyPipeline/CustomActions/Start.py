@@ -11,54 +11,48 @@ class StartApp(CustomAction):
         argv: CustomAction.RunArg,
     ) -> bool:
         context.tasker.controller.post_start_app("com.cipaishe.wuhua.bilibili")
+
+        RecoUpdate = context.run_recognition("RecoUpdate",
+                                            image=context.tasker.controller.post_screencap().wait().get(),
+                                            pipeline_override={"RecoUpdate":{"recognition": "OCR",
+                                                                                "expected": "检测到终端数据更新"}})
+        if RecoUpdate:
+            time.sleep(1)
+            context.tasker.controller.post_click(765, 430)
+            logger.info("正在更新物华弥新...")
+        
+        # 等待游戏加载
         while True:
-            
-            RecoUpdate = context.run_recognition("RecoUpdate",
-                                                image=context.tasker.controller.post_screencap().wait().get(),
-                                                pipeline_override={"RecoUpdate":{"recognition": "OCR",
-                                                                                 "expected": "检测到终端数据更新"}})
-            if RecoUpdate != None:
-                time.sleep(1)
-                context.tasker.controller.post_click(765, 430)
-                logger.info("正在更新物华弥新...")
-
             RecoAnnouncement = context.run_recognition("RecoAnnouncement",
-                                                image=context.tasker.controller.post_screencap().wait().get(),
-                                                pipeline_override={"RecoAnnouncement":{"recognition": "OCR",
-                                                                                 "expected": "活动公告"}})
-            if RecoAnnouncement != None:
-                time.sleep(1)
+                                    image=context.tasker.controller.post_screencap().wait().get(),
+                                    pipeline_override={"RecoAnnouncement":{"roi": [327,83,145,49],
+                                                                            "recognition": "OCR",
+                                                                            "expected": "活动公告"}})
+            if RecoAnnouncement and RecoAnnouncement.best_result.text == "活动公告":
+                if self.IsInEntryGamePage(context, argv):
+                    if self.IsInEntryGamePage(context, argv).best_result.text == "抵制不良游戏":
+                        logger.info("已经在游戏入口页面")
+                        break
                 CloseAnnouncement = context.run_task("RecoAnnouncement",
-                                                pipeline_override={"RecoAnnouncement":{"recognition": "TemplateMatch",
-                                                                                 "template": "Startup/12.png",
-                                                                                 "action": "Click"}})
-                
+                                    pipeline_override={"RecoAnnouncement":{"roi": [1098,31,154,138],
+                                                                        "recognition": "TemplateMatch",
+                                                                            "template": "Startup/12.png",
+                                                                            "action": "Click"}})
                 logger.info("关闭公告")
-            
-            EntryGame = context.run_recognition("EntryGame",
-                                                image=context.tasker.controller.post_screencap().wait().get(),
-                                                pipeline_override={"EntryGame":{"recognition": "OCR",
-                                                                                 "expected": "壬音"}})
-            if EntryGame != None:
-                context.tasker.controller.post_click(EntryGame.best_result.box[0],EntryGame.best_result.box[1])
-                time.sleep(5)
-                return_plot_detail = context.run_recognition("skip_return_Plot",
-                        image=context.tasker.controller.post_screencap().wait().get(),
-                        pipeline_override={"skip_return_Plot":{"recognition": "OCR",
-                                                                "expected": "没人"}})
-                if return_plot_detail:
-                    context.run_task("Return", pipeline_override={
-                        "Return": {"action": "custom", "custom_action": "Return"},
-                    })
-                logger.info("进入游戏")
-                return True
-            
-            SignIn = context.run_recognition("SignIn",
-                                                image=context.tasker.controller.post_screencap().wait().get(),
-                                                pipeline_override={"SignIn":{"recognition": "OCR",
-                                                                                 "expected": "请输入手机号"}})
-
-            if SignIn !=None:
-                logger.error("登录失败，请用户自行登录")
-                return True
-            
+                break
+            else:
+                time.sleep(0.2)
+        isinentrygamepage = self.IsInEntryGamePage(context, argv)
+        if isinentrygamepage:
+            time.sleep(0.5)
+            print(isinentrygamepage.best_result.text)
+            context.run_task("EntryGame", pipeline_override={"EntryGame":{"target": [303,112,775,453],
+                                                                    "action": "Click"}})
+            logger.info("进入游戏")
+    def IsInEntryGamePage(self, context: Context, argv: CustomAction.RunArg,):
+        IsInEntryGamePage = context.run_recognition("IsInEntryGamePage",
+                                image=context.tasker.controller.post_screencap().wait().get(),
+                                pipeline_override={"IsInEntryGamePage":{"roi": [223,633,212,34],
+                                                                        "recognition": "OCR",
+                                                                        "expected": "抵制不良游戏"}})
+        return IsInEntryGamePage

@@ -9,6 +9,8 @@ from MWATools.MWAConfig import MWAConfig
 from PyPipeline.CustomActions.Start import StartApp
 from PyPipeline.CustomActions.Return import Return
 from PyPipeline.CustomActions.OpenRecruitment import OpenRecruitment
+from PyPipeline.CustomActions.DailyCheckin import DailyCheckin
+from PyPipeline.CustomActions.ReturnHome import ReturnHome
 
 from PyPipeline.CustomRecos.PopUpRecognition import PopUpRecognition
 
@@ -28,14 +30,23 @@ class Return(Return):
 @MWAResource.resource.custom_action("OpenRecruitment")
 class OpenRecruitment(OpenRecruitment):
     ...
+    
+@MWAResource.resource.custom_action("DailyCheckin")
+class DailyCheckin(DailyCheckin):
+    ...
+
+@MWAResource.resource.custom_action("ReturnHome")
+class ReturnHome(ReturnHome):
+    ...
 
 @MWAResource.resource.custom_recognition("PopUpRecognition")
 class PopUpRecognition(PopUpRecognition):
     ...
+
 if __name__ == '__main__':
     try:
         pipeline_override = {
-            "MyCustomEntry": {"action": "custom", "custom_action": "StartApp"},
+            "MyCustomEntry": {"action": "custom", "custom_action": "OpenRecruitment"},
         }
         MWAController = MWAControllerClass()
         MWAController.load_controller()
@@ -47,10 +58,10 @@ if __name__ == '__main__':
         MWATasker.MWATaskerBind(controller=adb_controller, resource=MWAResource.resource)
         # task_detail = MWATasker.run_action("MyCustomEntry", pipeline_override)
         reco_pipeline_override = {
-            "MyCustomReco": {"recognition":"custom", "custom_recognition":"PopUpRecognition"},
+            "MyCustomReco": {"recognition":"custom", "custom_recognition":"OpenRecruitment"},
         }
-        reco_detail = MWATasker.run_custom_recognition("MyCustomReco", pipeline_override=reco_pipeline_override)
-        print("识别结果：", reco_detail)
+        reco_detail = MWATasker.run_custom_recognition("MyCustomEntry", pipeline_override=pipeline_override)
+        
         # MWATaskPipelineClass = MWATaskPipelineClass()
         # print(MWATaskPipelineClass.add_pipeline('启动'))
         # print(MWATaskPipelineClass.add_pipeline('器者征集',True))

@@ -22,10 +22,24 @@ class Return(CustomAction):
 
             Claim_return_rewards = context.run_task("Claim_return_rewards",
                                                     pipeline_override={"Claim_return_rewards":{"recognition": "OCR",
-                                                                                        "expected": "领取",
+                                                                                            "expected": "领取",
                                                                                             "action":"Click"}})
+
             if Claim_return_rewards:
                 time.sleep(1)
                 context.tasker.controller.post_click(400,200)
+
+                receive_rewards_detail = context.run_recognition("dian",
+                            image=context.tasker.controller.post_screencap().wait().get(),
+                            pipeline_override={"dian":{"recognition": "OCR",
+                                                                "expected": "点",
+                                                                "roi":[978,106,240,502],
+                                                                "next":"ji"},
+                                                "ji":{"recognition": "OCR",
+                                                                "expected": "击",
+                                                                "roi":[978,106,240,502],
+                                                                "next":"click_btn"},
+                                                "click_btn":{"action":"Click",
+                                                            "target":[479,105,719,503]}})
                 logger.info("领取回归奖励")
                 return True
