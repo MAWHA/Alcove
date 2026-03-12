@@ -19,14 +19,13 @@ class DailyCheckin(CustomAction):
                                                     "ji":{"recognition": "OCR",
                                                                     "expected": "击",
                                                                     "roi":[978,106,240,502]}})
-        receive = context.tasker.controller.post_click(detail.best_result.box[0],
-                                                        detail.best_result.box[1])
+        if detail.hit:
+            receive = context.tasker.controller.post_click(detail.best_result.box[0],
+                                                            detail.best_result.box[1])
+            print("receive:",receive.status.succeeded)
         
-        detail =  context.run_recognition("dian",
-                                image=context.tasker.controller.post_screencap().wait().get(),
-                                pipeline_override={"dian":{"recognition": "Temp",
-                                                                    "expected": "点",
-                                                                    "roi":[978,106,240,502],
-                                                                    "next":"ji"}})
-        print(detail)
-        print("receive:",receive)
+        detail =  context.run_task("dian",
+                                pipeline_override={"dian":{"recognition": "TemplateMatch",
+                                                                    "template": "StartUp/AccumulatedSignInExit.png",
+                                                                    "roi":[1160,60,79,76],
+                                                                    "action": "Click"}})

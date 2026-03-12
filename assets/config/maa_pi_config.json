@@ -1,21 +1,12 @@
 {
     "resource": "B 服",
-    "controller": {
-        "name": "安卓端"
-    },
-    "task": [
-        {
-            "name": "活动签到",
-            "option": {},
-            "__vscExpand": false,
-            "__vscKey": "434ef1cc-637f-4e61-8235-8c6d28a41cae"
-        }
-    ],
+    "controller": "安卓端",
+    "task": [],
     "adb": {
         "adb_path": "E:/mumu12/mumu12/MuMu Player 12/nx_main/adb.exe",
         "address": "127.0.0.1:16384",
         "screencap": "64",
-        "input": "18446744073709551615",
+        "input": "18446744073709551607",
         "config": {
             "extras": {
                 "mumu": {

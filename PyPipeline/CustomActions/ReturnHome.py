@@ -14,7 +14,8 @@ class ReturnHome(CustomAction):
                                 image=context.tasker.controller.post_screencap().wait().get(),
                                 pipeline_override={"is_in_home":{"roi": [884,525,219,89],
                                                                 "recognition": "OCR",
-                                                                "expected": "器者征集"}}):
+                                                                "expected": "器者征集"}}).hit:
+            print("+++++",isinhome)
             logger.info("当前已经在主界面")
             return True    
         else:
