@@ -210,4 +210,19 @@ marimo/_lsp/
 __marimo__/
 
 # dev docs
-docs/
+# 用 `docs/*` 而不是 `docs/`：一旦整个目录被排除，下面的 `!` 放行就失效了
+# （git 不会进入被排除的目录），而本仓库自己的两份文档要进版本库。
+docs/*
+!docs/移植规范.md
+!docs/迁移对照表.md
+
+# 运行时自动改写：MWATools/MWAPaths.py 的 interface_path() 会把找到的
+# interface.json 绝对路径写回这里。内容是**机器本地**的（Windows 是
+# e:\Alcove\...，Linux 是 /home/...），不该进版本库；删掉也能自动重建。
+config.json
+
+# 每次运行都会新建一个 mwa_时间戳.log
+logs/
+
+# 调查期间临时下载的参考资料，随时可删
+.tmp_*/
