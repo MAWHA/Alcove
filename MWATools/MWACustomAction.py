@@ -44,8 +44,11 @@ logger = get_logger("自定义动作")
 
 #: 自定义动作放这里 —— 一个动作一个 .py，丢进去就会被自动发现。
 ACTION_DIR = PROJECT_ROOT / "PyPipeline" / "CustomActions"
-#: 自定义识别放这里（旧配置里 ``custom_demo.json`` 引用的 ``event_select`` 属于这类）。
-RECOGNITION_DIR = PROJECT_ROOT / "PyPipeline" / "CustomRecognitions"
+#: 自定义识别放这里（上游现有 ``CustomRecos/PopUpRecognition.py``）。
+#: 目录名跟随上游的既成事实 ``CustomRecos``，**不是** ``CustomRecognitions``。
+#: 早先这里写成后者，后果是 ``PopUpRecognition`` 从来没被发现过 —— 扫的是一个
+#: 不存在的目录，``_scan`` 只打一行 debug 就跳过去了，静默失效。
+RECOGNITION_DIR = PROJECT_ROOT / "PyPipeline" / "CustomRecos"
 
 
 def _ensure_importable() -> None:

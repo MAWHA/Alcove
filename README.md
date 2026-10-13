@@ -39,6 +39,7 @@ uv run python main.py --gui          # 打开图形界面
 | `--no-pipeline` | 不加载旧 pipeline 节点表。只跑已迁移的 Python 任务时可以加，启动更快 |
 | `--debug` | 打开 maafw 的调试日志与存图 |
 | `--gui` | 打开图形界面 |
+| `--selftest` | 自检：不连设备，只检查路径、资源包、模板图库、OCR 模型是否装全了。**装完 / 解压完先跑一次这个** |
 | `--keep-error` | 出错时不清理临时文件 |
 | `-q`, `--quiet` | 只留文件日志，不往控制台打 |
 
@@ -125,3 +126,23 @@ def 领全部(ctx) -> bool:
   [MaaXYZ/MaaCommonAssets](https://github.com/MaaXYZ/MaaCommonAssets) 的 `OCR/ppocr_v5/zh_cn/`（约 20 MB）。
 - 两个资源包：`assets/resource_picli/base`（命令行这边用）与 `assets/resource/base`（图形界面那边用）。
 - **日志**在 `logs/` 下；maafw 自己的日志在 `logs/maa/`。
+
+---
+
+## 打包成 exe
+
+Windows 免安装版（onedir）在 GitHub Actions 上出：仓库 → `Actions` → 左边「打包」→
+`Run workflow`，大约十分钟后在那一页底部的 `Artifacts` 里下载 **`Alcove-windows-x64.zip`**。
+打 tag（`git tag v0.1.0 && git push origin v0.1.0`）还会自动发到 Releases。
+
+为什么不能在这台机器上直接打、`Alcove.spec` 里那几个不显然的决定（只读/可写目录分家、
+`MaaAgentBinary` 要跟 `maa/` 平级、maa 的 dlopen 库要在包根再放一份……）、体积构成、
+以及一张排错对照表，都写在 [docs/打包说明.md](docs/打包说明.md)。
+
+解压之后**先跑一次自检**（不连设备，几秒钟）：
+
+```
+Alcove.exe --selftest
+```
+
+全绿再开界面：`Alcove.exe --gui`。

@@ -6,6 +6,7 @@
     python main.py --all                # 跑注册表里的全部任务
     python main.py --device 0           # 指定第 0 个设备
     python main.py --gui                # 打开图形界面
+    python main.py --selftest           # 自检：路径 / 资源 / OCR 模型，不连设备
     python main.py --debug              # 打开 maafw 的调试日志与截图
 
 之前的版本要靠 MaaPiCli 的 interface.json 驱动，这里全部换成 Python 直连：
@@ -25,10 +26,13 @@ import argparse
 import sys
 from pathlib import Path
 
-# 允许从任意目录运行：把项目根塞进 sys.path
-PROJECT_ROOT = Path(__file__).resolve().parent
-if str(PROJECT_ROOT) not in sys.path:
-    sys.path.insert(0, str(PROJECT_ROOT))
+# 允许从任意目录运行：把项目根塞进 sys.path。
+# 打包成 exe 之后 PyInstaller 已经接管了导入路径，这里跳过（冻结环境里
+# __file__ 是合成路径，插进 sys.path 只会平白多一个不存在的目录）。
+if not getattr(sys, "frozen", False):
+    PROJECT_ROOT = Path(__file__).resolve().parent
+    if str(PROJECT_ROOT) not in sys.path:
+        sys.path.insert(0, str(PROJECT_ROOT))
 
 from MWATools.MWALogging import get_logger, setup_logging  # noqa: E402
 from MWATools import MWAController, MWATask, MWATasker  # noqa: E402
@@ -58,6 +62,8 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--debug", action="store_true", help="开启 maafw 调试日志与存图")
     parser.add_argument("--gui", action="store_true", help="打开图形界面")
     parser.add_argument("--keep-error", action="store_true", help="任务失败也继续跑后面的")
+    parser.add_argument("--selftest", action="store_true",
+                        help="自检：不连设备，只检查路径/资源/OCR 模型是否装全了")
     parser.add_argument("-q", "--quiet", action="store_true", help="只写日志文件，不打屏幕")
     return parser
 
@@ -166,7 +172,118 @@ def run_tasks(runner: MWATasker.MWATaskerClass, keys: list[str],
     return ok
 
 
+def _force_utf8_console() -> None:
+    """把标准输出/错误切成 UTF-8。
+
+    Windows 控制台默认是 GBK（cp936），日志里的中文一 print 就
+    ``UnicodeEncodeError``。源码运行时还能靠 ``PYTHONUTF8=1`` 绕过去，打包成
+    exe 之后就没人替用户设这个变量了，所以在程序里兜住。
+
+    ``errors="replace"`` 是关键：终端字体不支持某个字时打问号，而不是崩掉。
+    任何一步失败都直接放过 —— 拿不到可重配的流（比如被重定向到管道）是常事。
+    """
+    for stream in (sys.stdout, sys.stderr):
+        try:
+            stream.reconfigure(encoding="utf-8", errors="replace")
+        except (AttributeError, ValueError, OSError):
+            pass
+
+
+def selftest(args) -> int:
+    """自检：不连设备，只确认这份程序（尤其是打包后的）装全了。
+
+    打包产物最容易出问题的地方全在磁盘上 —— 只读/可写目录分家、OCR 模型没打进去、
+    模板图库丢了、扫目录加载的模块没被 PyInstaller 收进去。这些都不需要连设备就能查，
+    所以单独给个开关：装完先跑一次 ``Alcove --selftest``。
+    """
+    from MWATools import (  # noqa: PLC0415
+        BUNDLE_ROOT,
+        CONFIG_FILE,
+        DEFAULT_BUNDLE,
+        FROZEN,
+        LOG_DIR,
+        MWAResourceClass,
+        USER_ROOT,
+        interface_path,
+        resolve_bundle_path,
+    )
+
+    problems: list[str] = []
+
+    def check(ok: bool, text: str) -> None:
+        print(f"  {'✓' if ok else '✗'} {text}")
+        if not ok:
+            problems.append(text)
+
+    print("─── 路径 ───")
+    print(f"  运行形态：{'打包产物（frozen）' if FROZEN else '源码'}")
+    print(f"  只读根 BUNDLE_ROOT：{BUNDLE_ROOT}")
+    print(f"  可写根 USER_ROOT  ：{USER_ROOT}")
+    print(f"  日志目录          ：{LOG_DIR}")
+    print(f"  配置缓存          ：{CONFIG_FILE}")
+    print()
+
+    print("─── 可写性 ───")
+    probe = USER_ROOT / ".alcove_write_test"
+    try:
+        probe.write_text("ok", encoding="utf-8")
+        probe.unlink()
+        check(True, f"USER_ROOT 可写：{USER_ROOT}")
+    except OSError as exc:
+        check(False, f"USER_ROOT 不可写（{exc}）—— 日志和 config.json 会写不进去")
+    print()
+
+    print("─── 资源 ───")
+    iface = interface_path()
+    print(f"  interface.json：{iface}")
+    check(iface.is_file(), "interface.json 存在")
+
+    bundle = resolve_bundle_path(args.bundle or DEFAULT_BUNDLE, BUNDLE_ROOT)
+    print(f"  资源包        ：{bundle}")
+    image_dir = bundle / "image"
+    pngs = sorted(image_dir.rglob("*.png")) if image_dir.is_dir() else []
+    check(bool(pngs), f"模板图库：{len(pngs)} 张 png")
+
+    ocr_dir = bundle / "model" / "ocr"
+    for name in ("det.onnx", "rec.onnx", "keys.txt"):
+        target = ocr_dir / name
+        size = target.stat().st_size if target.is_file() else 0
+        check(size > 0, f"OCR {name}：{size} 字节（目录 {ocr_dir}）")
+    print()
+
+    print("─── 真的加载一遍（不需要设备）───")
+    resource = MWAResourceClass()
+    try:
+        ok = resource.load(bundle, with_ocr=not args.no_ocr,
+                           with_pipeline=not args.no_pipeline)
+    except Exception as exc:  # noqa: BLE001 - 自检就是要把异常显示出来
+        check(False, f"资源加载抛异常：{exc}")
+        ok = False
+    else:
+        check(ok, "模板图库 + OCR 模型 + 自定义扩展都挂上了")
+    check(bool(resource.resource.loaded), "maa 那边报告 Resource 已加载")
+    print()
+
+    print("─── 任务注册 ───")
+    specs = MWATask.all_tasks()
+    legacy = MWATask.legacy_task_keys()
+    check(len(specs) >= 19,
+          f"注册任务 {len(specs)} 个（Python 实现 {len(specs) - len(legacy)} 个，"
+          f"旧流水线 {len(legacy)} 个）")
+    print()
+
+    if problems:
+        print(f"自检发现 {len(problems)} 个问题：")
+        for item in problems:
+            print(f"  · {item}")
+        print("  排错对照见 docs/打包说明.md。")
+        return 1
+    print("自检通过。")
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
+    _force_utf8_console()
     args = build_parser().parse_args(argv)
 
     setup_logging(to_file=not args.quiet, console=not args.quiet)
@@ -175,6 +292,9 @@ def main(argv: list[str] | None = None) -> int:
     from PyPipeline import Tasks  # noqa: PLC0415
 
     Tasks.load_all()
+
+    if args.selftest:
+        return selftest(args)
 
     if args.gui:
         return launch_gui(args)

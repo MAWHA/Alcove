@@ -1,0 +1,130 @@
+name: 打包
+
+# 什么时候跑：
+#   * 手动 —— Actions 页面点「Run workflow」，最常用
+#   * 打 tag（v1.0 这种）—— 顺手把产物挂到 Release 上
+on:
+  workflow_dispatch:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write # 打 tag 时发 Release 要用
+
+env:
+  # 让 Python 的 stdout/stderr 走 UTF-8 —— 日志里全是中文，Windows 上不设会乱码
+  PYTHONUTF8: "1"
+  PYTHONIOENCODING: "utf-8"
+  PIP_DISABLE_PIP_VERSION_CHECK: "1"
+
+jobs:
+  # ------------------------------------------------------------------ Windows
+  windows:
+    name: Windows x64（onedir）
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: 安装依赖
+        run: |
+          python -m pip install --upgrade pip
+          # 运行时依赖（与 pyproject.toml 保持一致）
+          python -m pip install "maafw>=5.14.3" "pillow>=12.1.1" "pyyaml>=6.0.3" "strenum>=0.4.15"
+          python -m pip install "flet>=1.0.4" "flet-desktop>=1.0.4"
+          # 打包期依赖：flet-cli 用 entry point 注册官方 PyInstaller hook，
+          # 少了它 hook-flet 不生效、桌面端客户端不会被打进包里
+          python -m pip install "flet-cli>=1.0.4" pyinstaller
+
+      - name: 下载 OCR 模型（不在版本库里，约 20MB）
+        run: python scripts/fetch_ocr_models.py
+
+      - name: 预置 flet 桌面端客户端（约 40MB，免得运行时联网下载）
+        run: python scripts/fetch_flet_client.py
+
+      - name: PyInstaller 打包
+        run: python -m PyInstaller --noconfirm --clean Alcove.spec
+
+      - name: 收尾（删掉 hook 塞进来的重复副本）
+        run: python scripts/prune_dist.py
+
+      - name: 冒烟测试 —— 帮助信息（硬性门槛）
+        run: dist/Alcove/Alcove.exe --help
+
+      - name: 冒烟测试 —— 自检（硬性门槛：路径 / 资源 / OCR 模型，不需要设备）
+        run: dist/Alcove/Alcove.exe --selftest
+
+      - name: 冒烟测试 —— 任务列表（要扫 ADB，云端跑不动就算了）
+        continue-on-error: true
+        timeout-minutes: 5
+        run: dist/Alcove/Alcove.exe --list
+
+      - name: 压缩产物
+        shell: pwsh
+        run: Compress-Archive -Path dist/Alcove -DestinationPath Alcove-windows-x64.zip -Force
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Alcove-windows-x64
+          path: Alcove-windows-x64.zip
+          retention-days: 14
+
+      - name: 打 tag 时发 Release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: Alcove-windows-x64.zip
+
+  # -------------------------------------------------------------------- Linux
+  # 顺带产物：跑在 Arch 之外的发行版上时能直接用（glibc ≥ 2.39）。
+  linux:
+    name: Linux x64（onedir）
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: 安装依赖
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "maafw>=5.14.3" "pillow>=12.1.1" "pyyaml>=6.0.3" "strenum>=0.4.15"
+          python -m pip install "flet>=1.0.4" "flet-desktop>=1.0.4"
+          python -m pip install "flet-cli>=1.0.4" pyinstaller
+
+      - name: 下载 OCR 模型
+        run: python scripts/fetch_ocr_models.py
+
+      - name: 预置 flet 桌面端客户端
+        run: python scripts/fetch_flet_client.py
+
+      - name: PyInstaller 打包
+        run: python -m PyInstaller --noconfirm --clean Alcove.spec
+
+      - name: 收尾
+        run: python scripts/prune_dist.py
+
+      - name: 冒烟测试 —— 帮助信息（硬性门槛）
+        run: dist/Alcove/Alcove --help
+
+      - name: 冒烟测试 —— 自检（硬性门槛：路径 / 资源 / OCR 模型，不需要设备）
+        run: dist/Alcove/Alcove --selftest
+
+      - name: 冒烟测试 —— 任务列表
+        continue-on-error: true
+        timeout-minutes: 5
+        run: dist/Alcove/Alcove --list
+
+      - name: 压缩产物
+        run: tar -czf Alcove-linux-x64.tar.gz -C dist Alcove
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Alcove-linux-x64
+          path: Alcove-linux-x64.tar.gz
+          retention-days: 14

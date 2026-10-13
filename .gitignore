@@ -215,6 +215,12 @@ __marimo__/
 docs/*
 !docs/移植规范.md
 !docs/迁移对照表.md
+!docs/打包说明.md
+
+# PyInstaller。上面第 36 行那条 `*.spec` 是 Python 模板自带、用来忽略
+# **自动生成**的 spec 的，而 Alcove.spec 是手写的、CI 要用它 —— 放行。
+# （忽略规则后来居上，所以必须写在这一行之后。）
+!Alcove.spec
 
 # 运行时自动改写：MWATools/MWAPaths.py 的 interface_path() 会把找到的
 # interface.json 绝对路径写回这里。内容是**机器本地**的（Windows 是

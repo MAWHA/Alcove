@@ -31,7 +31,16 @@ from .MWAController import (
 )
 from .MWAInterface import ProjectInterface, load_interface
 from .MWALogging import Events, events, get_logger, install_gui_handler, setup_logging
-from .MWAPaths import ASSETS_DIR, CONFIG_FILE, LOG_DIR, PROJECT_ROOT, interface_path
+from .MWAPaths import (
+    ASSETS_DIR,
+    BUNDLE_ROOT,
+    CONFIG_FILE,
+    FROZEN,
+    LOG_DIR,
+    PROJECT_ROOT,
+    USER_ROOT,
+    interface_path,
+)
 from .MWAResource import DEFAULT_BUNDLE, MWAResourceClass, resolve_bundle_path
 from .MWAScreen import BASE_SIZE, Match, Screen
 from .MWATask import (
@@ -53,6 +62,7 @@ from .MWATasker import MWATaskerClass
 
 __all__ = [
     # 路径 / 日志
+    "FROZEN", "BUNDLE_ROOT", "USER_ROOT",
     "PROJECT_ROOT", "ASSETS_DIR", "CONFIG_FILE", "LOG_DIR", "interface_path",
     "setup_logging", "get_logger", "install_gui_handler", "events", "Events",
     # 控制器
