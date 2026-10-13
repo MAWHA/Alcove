@@ -31,6 +31,7 @@ logger = get_logger("界面")
 PREVIEW_WIDTH = 960        # 预览图抽稀宽度：够看清楚，又不至于每帧传几 MB
 PUMP_INTERVAL = 0.08       # 队列泵的间隔（秒）
 MAX_LOG_LINES = 800
+SCAN_TIMEOUT = 25.0        # 设备扫描的等待上限（秒），超了就先放界面一马
 
 _LEVEL_COLORS = {
     "DEBUG": ft.Colors.ON_SURFACE_VARIANT,
@@ -57,6 +58,7 @@ class AlcoveApp:
 
         self._busy = False
         self._connecting = False
+        self._scanning = False
         self._stop_flag = threading.Event()
         self._queue: "queue.Queue[tuple]" = queue.Queue()
         self._log_lines: list[ft.Text] = []
@@ -437,22 +439,68 @@ class AlcoveApp:
     # ============================================================== 设备
 
     def refresh_devices(self) -> None:
-        try:
-            self.targets = MWAController.list_targets()
-        except Exception as exc:
-            logger.error("搜索设备失败：%s", exc)
-            self.targets = []
+        """请求搜索设备 —— **立刻返回**，真正的扫描在后台线程里跑。
 
-        self.device_dropdown.options = [
-            ft.DropdownOption(key=str(index), text=target.label)
-            for index, target in enumerate(self.targets)
-        ]
-        if self.targets and self.device_dropdown.value is None:
-            self.device_dropdown.value = "0"
-        self.device_dropdown.hint_text = (
-            "先刷新，再选一个设备或窗口" if self.targets else "没有找到设备"
-        )
+        这里踩过一个坑：``MWAController.list_targets()`` 会调到 maafw 的
+        ``Toolkit.find_adb_devices()``，那是个阻塞的 C 调用，一旦有模拟器
+        正在被扫描，它能卡住几分钟。早先的写法是在 ``__init__`` 里直接
+        同步调它，于是 ``main(page)`` 迟迟不返回，flet 客户端就永远停在
+        "working…" 那屏上。现在只做三件事：占位、改提示、起线程。
+        """
+        if self._scanning:
+            return
+        self._scanning = True
+        self.refresh_button.disabled = True
+        self.device_dropdown.hint_text = "正在搜索设备…"
         self.page.update()
+        threading.Thread(target=self._scan_worker, name="alcove-scan", daemon=True).start()
+
+    def _scan_worker(self) -> None:
+        """后台线程：扫设备。扫太久就放弃等待，绝不把界面拖住。"""
+        box: dict[str, Any] = {}
+
+        def _do_scan() -> None:
+            try:
+                box["targets"] = MWAController.list_targets()
+            except Exception as exc:  # noqa: BLE001 - 扫不到设备不该让界面崩
+                box["error"] = str(exc)
+                logger.error("搜索设备失败：%s", exc, exc_info=True)
+
+        worker = threading.Thread(target=_do_scan, name="alcove-scan-inner", daemon=True)
+        worker.start()
+        worker.join(timeout=SCAN_TIMEOUT)
+
+        if worker.is_alive():
+            # maafw 那边还挂着，那个线程就让它自生自灭（daemon），界面先走
+            self._queue.put(
+                ("targets", None, f"搜索超时（{SCAN_TIMEOUT:.0f} 秒），点刷新再试一次")
+            )
+            return
+        if "error" in box:
+            self._queue.put(("targets", None, f"搜索失败：{box['error']}"))
+            return
+        self._queue.put(("targets", box.get("targets", []), ""))
+
+    def _apply_targets(self, targets: Optional[list], note: str) -> None:
+        """回到界面线程再动控件。``targets=None`` 表示「这次没换成」。"""
+        self._scanning = False
+        self.refresh_button.disabled = False
+
+        if targets is not None:
+            self.targets = targets
+            self.device_dropdown.options = [
+                ft.DropdownOption(key=str(index), text=target.label)
+                for index, target in enumerate(self.targets)
+            ]
+            if self.targets and self.device_dropdown.value is None:
+                self.device_dropdown.value = "0"
+
+        if note:
+            self.device_dropdown.hint_text = note
+        elif self.targets:
+            self.device_dropdown.hint_text = "先刷新，再选一个设备或窗口"
+        else:
+            self.device_dropdown.hint_text = "没有找到设备"
 
     def _on_connect(self, e) -> None:
         if self._connecting:
@@ -657,6 +705,10 @@ class AlcoveApp:
                                      error=True)
             else:
                 self._set_run_status(f"全部完成（{done} 个任务，{ok} 成功）")
+            return True
+
+        if kind == "targets":
+            self._apply_targets(message[1], message[2])
             return True
 
         if kind == "run_error":

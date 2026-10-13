@@ -17,7 +17,16 @@ dependencies = [
 
 [project.optional-dependencies]
 # 图形界面。只用命令行的话不必装。
-gui = ["flet>=1.0.4"]
+#
+# `flet-desktop` 一定要单独列出来：`flet` 本体只带核心 + web 服务，
+# 桌面客户端在那个包里。少了它会触发 flet 运行时的 `ensure_flet_desktop_
+# package_installed()`，也就是当场 pip install 一个 `flet-desktop==<版本>` ——
+# 在 uv 建的 venv 里这一步常常卡住或直接失败，表现就是窗口一直停在
+# "working…" 那屏上。
+gui = [
+    "flet>=1.0.4",
+    "flet-desktop>=1.0.4",
+]
 
 [[tool.uv.index]]
 url = "https://pypi.tuna.tsinghua.edu.cn/simple"
