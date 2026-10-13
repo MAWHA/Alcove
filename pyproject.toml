@@ -5,9 +5,27 @@ description = "Alcove 物华弥新小助手py重写版"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "maafw>=5.8.1",
+    # 上游原是 >=5.8.1。新的任务模块用到 5.14 才有的 Screen/Context 接口，
+    # 所以抬到这个下限；5.14 向下包含 5.8 的能力，上游的代码不受影响。
+    "maafw>=5.14.3",
     "pillow>=12.1.1",
     "pyyaml>=6.0.3",
+    # maa/define.py 里有一句无条件的 `from strenum import StrEnum`，
+    # 而 maafw 自己没声明这个依赖，所以必须由我们补上。
+    "strenum>=0.4.15",
+]
+
+[project.optional-dependencies]
+# 图形界面。只用命令行的话不必装。
+#
+# `flet-desktop` 一定要单独列出来：`flet` 本体只带核心 + web 服务，
+# 桌面客户端在那个包里。少了它会触发 flet 运行时的 `ensure_flet_desktop_
+# package_installed()`，也就是当场 pip install 一个 `flet-desktop==<版本>` ——
+# 在 uv 建的 venv 里这一步常常卡住或直接失败，表现就是窗口一直停在
+# "working…" 那屏上。
+gui = [
+    "flet>=1.0.4",
+    "flet-desktop>=1.0.4",
 ]
 
 [[tool.uv.index]]
